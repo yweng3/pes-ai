@@ -1,0 +1,345 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEEE PES Organizational Structure</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        #graph {
+            width: 100%;
+            height: 800px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .node {
+            cursor: pointer;
+            stroke: #fff;
+            stroke-width: 2px;
+        }
+
+        .node:hover {
+            stroke: #333;
+            stroke-width: 3px;
+        }
+
+        .link {
+            stroke: #999;
+            stroke-opacity: 0.6;
+            stroke-width: 2px;
+        }
+
+        .link.hierarchy {
+            stroke: #2c3e50;
+            stroke-width: 3px;
+        }
+
+        .link.membership {
+            stroke: #7f8c8d;
+            stroke-width: 2px;
+        }
+
+        .node-label {
+            font-size: 12px;
+            font-weight: bold;
+            text-anchor: middle;
+            pointer-events: none; /* Allows mouse events to pass through to the circle */
+            fill: #2c3e50;
+        }
+
+        .insight-box {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 12px;
+            max-width: 300px;
+            pointer-events: none;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            display: block; /* Always show, but can be hidden with opacity */
+        }
+
+        .legend {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 10px;
+            border: 2px solid #fff;
+        }
+
+        .controls {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .control-button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .control-button:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>IEEE PES Organizational Structure</h1>
+        <p class="subtitle">Interactive visualization of committees, subcommittees, working groups, and task forces</p>
+
+        <div class="controls">
+            <button class="control-button" onclick="resetZoom()">Reset View</button>
+            <button class="control-button" onclick="togglePhysics()">Toggle Animation</button>
+        </div>
+
+        <div style="position: relative;">
+            <svg id="graph"></svg>
+
+            <div class="legend">
+                <h3 style="margin-top: 0; color: #2c3e50;">Legend</h3>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #1f77b4;"></div>
+                    <span>IEEE PES Root</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #ff7f0e;"></div>
+                    <span>Committees</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #2ca02c;"></div>
+                    <span>Subcommittees</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #d62728;"></div>
+                    <span>Working Groups</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #9467bd;"></div>
+                    <span>Task Forces</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const data = {"nodes": [{"id": 0, "name": "IEEE PES", "type": "root", "color": "#1f77b4", "size": 30, "insights": "IEEE Power & Energy Society - Leading professional organization for power and energy engineering", "full_name": "IEEE Power & Energy Society"}, {"id": 1, "name": "Committees", "type": "category", "color": "#666666", "size": 20, "insights": "Committees within IEEE PES organizational structure", "full_name": "Committees"}, {"id": 2, "name": "Committees of the Technical Council", "full_name": "Committees of the Technical Council", "type": "committee", "color": "#ff7f0e", "size": 15, "insights": "Power system engineering and technology development", "url": "https://ieee-pes.org/technical-activities/committees/#content", "scope": "window._wpemojiSettings = {\"baseUrl\":\"https:\\/\\/s.w.org\\/images\\/core\\/emoji\\/15.1.0\\/72x72\\/\",\"ext\":\".png\",\"svgUrl\":\"https:\\/\\/s.w.org\\/images\\/core\\/emoji\\/15.1.0\\/svg\\/\",\"svgExt\":\".svg\",\"source\":{\"...", "members_count": 10, "subgroups_count": 0}, {"id": 3, "name": "IEEE PES Transmission & Distribution Committee", "full_name": "IEEE PES Transmission & Distribution Committee", "type": "committee", "color": "#ff7f0e", "size": 15, "insights": "Power transmission systems, grid infrastructure, and high-voltage technologies", "url": "https://cmte.ieee.org/pes-td/history/", "scope": "/* <![CDATA[ */\nwindow._wpemojiSettings = {\"baseUrl\":\"https:\\/\\/s.w.org\\/images\\/core\\/emoji\\/15.1.0\\/72x72\\/\",\"ext\":\".png\",\"svgUrl\":\"https:\\/\\/s.w.org\\/images\\/core\\/emoji\\/15.1.0\\/svg\\/\",\"svgExt\":\"....", "members_count": 1, "subgroups_count": 2}, {"id": 4, "name": "IEEE PES HVDC & FACTS Subcommittee", "full_name": "IEEE PES HVDC & FACTS Subcommittee", "type": "committee", "color": "#ff7f0e", "size": 15, "insights": "Power system engineering and technology development", "url": "https://cmte.ieee.org/pes-hvdc-facts", "scope": "/* <![CDATA[ */\nwindow._wpemojiSettings = {\"baseUrl\":\"https:\\/\\/s.w.org\\/images\\/core\\/emoji\\/15.1.0\\/72x72\\/\",\"ext\":\".png\",\"svgUrl\":\"https:\\/\\/s.w.org\\/images\\/core\\/emoji\\/15.1.0\\/svg\\/\",\"svgExt\":\"....", "members_count": 3, "subgroups_count": 4}, {"id": 5, "name": "IEEE PES Smart Buildings-Loads-Customer Systems Committee", "full_name": "IEEE PES Smart Buildings-Loads-Customer Systems Committee", "type": "committee", "color": "#ff7f0e", "size": 15, "insights": "Smart grid technologies, communications, and automation", "url": "https://cmte.ieee.org/pes-sblc/resources/", "scope": "/* <![CDATA[ */\nwindow._wpemojiSettings = {\"baseUrl\":\"https:\\/\\/s.w.org\\/images\\/core\\/emoji\\/15.1.0\\/72x72\\/\",\"ext\":\".png\",\"svgUrl\":\"https:\\/\\/s.w.org\\/images\\/core\\/emoji\\/15.1.0\\/svg\\/\",\"svgExt\":\"....", "members_count": 1, "subgroups_count": 1}, {"id": 6, "name": "Subcommittees", "type": "category", "color": "#666666", "size": 20, "insights": "Subcommittees within IEEE PES organizational structure", "full_name": "Subcommittees"}, {"id": 7, "name": "IEEE PES Transmission & Distribution Committee", "full_name": "IEEE PES Transmission & Distribution Committee", "type": "subcommittee", "color": "#2ca02c", "size": 15, "insights": "Power transmission systems, grid infrastructure, and high-voltage technologies", "url": "https://cmte.ieee.org/pes-td/subcommittees/#top", "scope": "/* <![CDATA[ */\nwindow._wpemojiSettings = {\"baseUrl\":\"https:\\/\\/s.w.org\\/images\\/core\\/emoji\\/15.1.0\\/72x72\\/\",\"ext\":\".png\",\"svgUrl\":\"https:\\/\\/s.w.org\\/images\\/core\\/emoji\\/15.1.0\\/svg\\/\",\"svgExt\":\"....", "members_count": 1, "subgroups_count": 2}, {"id": 8, "name": "IEEE PES Distribution Subcommittee", "full_name": "IEEE PES Distribution Subcommittee", "type": "subcommittee", "color": "#2ca02c", "size": 15, "insights": "Power distribution networks, smart grid technologies, and customer interfaces", "url": "https://cmte.ieee.org/pes-dist/", "scope": "/* <![CDATA[ */\nwindow._wpemojiSettings = {\"baseUrl\":\"https:\\/\\/s.w.org\\/images\\/core\\/emoji\\/15.1.0\\/72x72\\/\",\"ext\":\".png\",\"svgUrl\":\"https:\\/\\/s.w.org\\/images\\/core\\/emoji\\/15.1.0\\/svg\\/\",\"svgExt\":\"....", "members_count": 2, "subgroups_count": 1}, {"id": 9, "name": "IEEE PES Power Quality Subcommittee", "full_name": "IEEE PES Power Quality Subcommittee", "type": "subcommittee", "color": "#2ca02c", "size": 15, "insights": "Power system engineering and technology development", "url": "https://cmte.ieee.org/pes-pq", "scope": "/* <![CDATA[ */\nwindow._wpemojiSettings = {\"baseUrl\":\"https:\\/\\/s.w.org\\/images\\/core\\/emoji\\/15.1.0\\/72x72\\/\",\"ext\":\".png\",\"svgUrl\":\"https:\\/\\/s.w.org\\/images\\/core\\/emoji\\/15.1.0\\/svg\\/\",\"svgExt\":\"....", "members_count": 1, "subgroups_count": 1}, {"id": 10, "name": "IEEE PES Transmission Subcommittee", "full_name": "IEEE PES Transmission Subcommittee", "type": "subcommittee", "color": "#2ca02c", "size": 15, "insights": "Power transmission systems, grid infrastructure, and high-voltage technologies", "url": "https://cmte.ieee.org/pes-transmission/", "scope": "/* <![CDATA[ */\nwindow._wpemojiSettings = {\"baseUrl\":\"https:\\/\\/s.w.org\\/images\\/core\\/emoji\\/15.1.0\\/72x72\\/\",\"ext\":\".png\",\"svgUrl\":\"https:\\/\\/s.w.org\\/images\\/core\\/emoji\\/15.1.0\\/svg\\/\",\"svgExt\":\"....", "members_count": 2, "subgroups_count": 1}, {"id": 11, "name": "IEEE PES Smart Buildings-Loads-Customer Systems Committee", "full_name": "IEEE PES Smart Buildings-Loads-Customer Systems Committee", "type": "subcommittee", "color": "#2ca02c", "size": 15, "insights": "Smart grid technologies, communications, and automation", "url": "https://cmte.ieee.org/pes-sblc/subcommittees/#top", "scope": "/* <![CDATA[ */\nwindow._wpemojiSettings = {\"baseUrl\":\"https:\\/\\/s.w.org\\/images\\/core\\/emoji\\/15.1.0\\/72x72\\/\",\"ext\":\".png\",\"svgUrl\":\"https:\\/\\/s.w.org\\/images\\/core\\/emoji\\/15.1.0\\/svg\\/\",\"svgExt\":\"....", "members_count": 1, "subgroups_count": 1}, {"id": 12, "name": "IEEE PES SBLC Loads Subcommittee", "full_name": "IEEE PES SBLC Loads Subcommittee", "type": "subcommittee", "color": "#2ca02c", "size": 15, "insights": "Power system engineering and technology development", "url": "https://cmte.ieee.org/pes-sblc-lsc/", "scope": "/* <![CDATA[ */\nwindow._wpemojiSettings = {\"baseUrl\":\"https:\\/\\/s.w.org\\/images\\/core\\/emoji\\/15.1.0\\/72x72\\/\",\"ext\":\".png\",\"svgUrl\":\"https:\\/\\/s.w.org\\/images\\/core\\/emoji\\/15.1.0\\/svg\\/\",\"svgExt\":\"....", "members_count": 1, "subgroups_count": 2}], "links": [{"source": 0, "target": 1, "type": "hierarchy"}, {"source": 1, "target": 2, "type": "membership"}, {"source": 1, "target": 3, "type": "membership"}, {"source": 1, "target": 4, "type": "membership"}, {"source": 1, "target": 5, "type": "membership"}, {"source": 0, "target": 6, "type": "hierarchy"}, {"source": 6, "target": 7, "type": "membership"}, {"source": 6, "target": 8, "type": "membership"}, {"source": 6, "target": 9, "type": "membership"}, {"source": 6, "target": 10, "type": "membership"}, {"source": 6, "target": 11, "type": "membership"}, {"source": 6, "target": 12, "type": "membership"}]};
+
+        const width = 1200;
+        const height = 800;
+
+        const svg = d3.select("#graph")
+            .attr("width", width)
+            .attr("height", height);
+
+        const g = svg.append("g");
+
+        // Add zoom behavior
+        const zoom = d3.zoom()
+            .scaleExtent([0.1, 4])
+            .on("zoom", (event) => {
+                g.attr("transform", event.transform);
+            });
+
+        svg.call(zoom);
+
+        // Create arrow markers
+        svg.append("defs").selectAll("marker")
+            .data(["hierarchy", "membership"])
+            .join("marker")
+            .attr("id", d => `arrow-${d}`)
+            .attr("viewBox", "0 -5 10 10")
+            .attr("refX", 20) // Adjusted refX to extend links further from node center
+            .attr("refY", 0)
+            .attr("markerWidth", 8)
+            .attr("markerHeight", 8)
+            .attr("orient", "auto")
+            .append("path")
+            .attr("d", "M0,-5L10,0L0,5")
+            .attr("fill", d => d === "hierarchy" ? "#2c3e50" : "#7f8c8d");
+
+        // Create force simulation
+        let simulation = d3.forceSimulation(data.nodes)
+            .force("link", d3.forceLink(data.links).id(d => d.id).distance(150)) // Increased link distance
+            .force("charge", d3.forceManyBody().strength(-500)) // Increased negative charge strength
+            .force("center", d3.forceCenter(width / 2, height / 2))
+            .force("collision", d3.forceCollide().radius(d => d.size + 15)); // Increased collision radius
+
+        // Create links
+        const link = g.append("g")
+            .selectAll("line")
+            .data(data.links)
+            .join("line")
+            .attr("class", d => `link ${d.type}`)
+            .attr("marker-end", d => `url(#arrow-${d.type})`);
+
+        // Create nodes
+        const node = g.append("g")
+            .selectAll("circle")
+            .data(data.nodes)
+            .join("circle")
+            .attr("class", "node")
+            .attr("r", d => d.size)
+            .attr("fill", d => d.color)
+            .call(d3.drag()
+                .on("start", dragstarted)
+                .on("drag", dragged)
+                .on("end", dragended));
+
+        // Create labels
+        const label = g.append("g")
+            .selectAll("text")
+            .data(data.nodes)
+            .join("text")
+            .attr("class", "node-label")
+            .attr("dy", d => d.size + 15) // Adjust label vertical offset
+            .style("font-size", d => d.type === 'root' ? '18px' : '14px')
+            .text(d => d.name);
+
+        // Create tooltip element once
+        const tooltip = d3.select("body").append("div")
+            .attr("class", "insight-box")
+            .style("opacity", 0);
+
+        // Add mouse events
+        node.on("mouseover", function(event, d) {
+            tooltip.transition().duration(200).style("opacity", .9);
+
+            let content = `<strong>${d.full_name || d.name}</strong><br/>`;
+            content += `<em>${d.insights}</em><br/>`;
+
+            if (d.scope) {
+                content += `<br/><strong>Scope:</strong> ${d.scope}<br/>`;
+            }
+            if (d.members_count > 0) {
+                content += `<strong>Members:</strong> ${d.members_count}<br/>`;
+            }
+            if (d.subgroups_count > 0) {
+                content += `<strong>Subgroups:</strong> ${d.subgroups_count}<br/>`;
+            }
+            if (d.url) {
+                content += `<br/><a href="${d.url}" target="_blank" style="color: #3498db;">Visit Page</a>`;
+            }
+
+            // Get node screen coordinates
+            const [nodeScreenX, nodeScreenY] = [event.pageX, event.pageY]; // Still using event.pageX/Y for immediate feedback
+
+            tooltip.html(content)
+                .style("left", (nodeScreenX + 15) + "px") // Offset tooltip to the right of the mouse
+                .style("top", (nodeScreenY - 20) + "px"); // Offset tooltip slightly above the mouse
+        })
+        .on("mouseout", function(d) {
+            tooltip.transition().duration(500).style("opacity", 0);
+        });
+
+        // Update positions on simulation tick
+        simulation.on("tick", () => {
+            link
+                .attr("x1", d => d.source.x)
+                .attr("y1", d => d.source.y)
+                .attr("x2", d => d.target.x)
+                .attr("y2", d => d.target.y);
+
+            node
+                .attr("cx", d => d.x)
+                .attr("cy", d => d.y);
+
+            label
+                .attr("x", d => d.x)
+                .attr("y", d => d.y);
+        });
+
+        // Drag functions
+        function dragstarted(event, d) {
+            if (!event.active) simulation.alphaTarget(0.3).restart();
+            d.fx = d.x;
+            d.fy = d.y;
+        }
+
+        function dragged(event, d) {
+            d.fx = event.x;
+            d.fy = event.y;
+        }
+
+        function dragended(event, d) {
+            if (!event.active) simulation.alphaTarget(0);
+            d.fx = null;
+            d.fy = null;
+        }
+
+        // Control functions
+        function resetZoom() {
+            svg.transition().duration(750).call(
+                zoom.transform,
+                d3.zoomIdentity
+            );
+        }
+
+        let animationRunning = true;
+        function togglePhysics() {
+            if (animationRunning) {
+                simulation.stop();
+                animationRunning = false;
+            } else {
+                simulation.restart();
+                animationRunning = true;
+            }
+        }
+    </script>
+</body>
+</html>
+        
