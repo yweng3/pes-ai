@@ -1,0 +1,1957 @@
+{
+    "nodes": [
+        {
+            "id": "PES",
+            "name": "PES Technical Committees",
+            "type": "root",
+            "url": "",
+            "chair": "",
+            "parent": "",
+            "scope": "",
+            "who-we-are": "",
+            "visible": true,
+            "size": 12,
+            "color": "#B02318"
+        },
+        {
+            "id": "AMPS",
+            "name": "Analytic Methods for Power Systems",
+            "type": "committee",
+            "url": "https://cmte.ieee.org/pes-amps/",
+            "chair": "Yanfeng Gong;Yanfeng.Gong@ieee.org",
+            "parent": "PES",
+            "scope": "Investigative modeling, analysis and solution methodologies,\ncomputational tools and techniques, and the effective\napplication of computing and intelligent systems in bulk\npower and distribution systems. Initiate and coordinate\nstudies, symposia, panel discussions and tutorials related to\nthe subjects of this area.\nAMPS coordinates activities with other groups on analytical\nmodels which are used in the study of system dynamic\nperformance, system planning, system operations, and\ndistribution system analysis.",
+            "who-we-are": "The Analytic Methods for Power Systems Technical\nCommittee is a standards developing committee of\nthe IEEE Power & Energy Society. Our members are\nindustry leaders, practitioners, students, and academics\nwith a common professional interest in analytic and\ncomputational methods for electric power and energy.\nBefore the IEEE Power & Energy Society Technical\nCommittee reorganization, effective July 2016, AMPS\nTechnical Committee and the majority of its subcommittees\nwas referred to as the IEEE PES Technical Committee on\nPower System Analysis, Computing, and Economics.",
+            "visible": true,
+            "size": 8,
+            "color": "#FBECA6"
+        },
+        {
+            "id": "BDA",
+            "name": "Big Data Analytics",
+            "type": "subcommittee",
+            "url": "https://site.ieee.org/pes-bdaps/",
+            "chair": "Hung-Ming Chou;hung-ming.chou@dominionenergy.com",
+            "parent": "AMPS",
+            "scope": "",
+            "who-we-are": "This subcommittee will bring together leaders from industry, academia, and government and meet regularly (both face-to-face meetings and Web-based conference calls) to define the architectural, computational, and practical challenges and opportunities brought by the emerging big data in the smart grid. The initial discussion will focus on the standards, management, and analytics of big multi-domain multi-resolution data (PMUs, SCADA, Weather, GIS, etc.) for power grid operations. Big Data initiative in the US and throughout the world has provided a unique window of opportunity for improving the analytical methods in power system operations. The proposed subcommittee will serve as a professional society hub to enable collective efforts towards defining a big data-driven grid operation roadmap.",
+            "visible": true,
+            "size": 5,
+            "color": "#CEECD0"
+        },
+        {
+            "id": "DDMMC",
+            "name": "Data-driven Modeling, Monitoring and Control in Power Distribution Networks",
+            "type": "working group",
+            "url": "https://intra.ece.ucr.edu/~nyu/IEEE%20PES%20WG.html",
+            "chair": "Nanpeng Yu;nyu@ece.ucr.edu",
+            "parent": "BDA",
+            "scope": "Data-driven analytics for power distribution systems;\nData-driven analytics for distributed energy resources;\nData-driven analytics for end-use customers",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "BDWS",
+            "name": "Big Data Webinar Series",
+            "type": "working group",
+            "url": "https://yweng3.github.io/webinar.html",
+            "chair": "Yang Weng;yang.weng@asu.edu",
+            "parent": "BDA",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "BDATS",
+            "name": "Big Data & Analytics for Transmission Systems",
+            "type": "working group",
+            "url": "https://www.zhaw.ch/en/engineering/institutes-centres/iefe/energy-storage-and-energy-grids/electric-power-systems-and-smart-grids/task-force-application-of-big-data-analytic-on-transmission-system-dynamic-security-assessment",
+            "chair": "Rafael Segundo;segu@zhaw.ch",
+            "parent": "BDA",
+            "scope": "Our working group pursues several goals. The following points describe what we will do in the coming years:\nAchieve transfer of knowledge between different scientific communities to solve challenging power system problems and bridge the gap between these communities.\nProvide new guidelines in the handling and managing of transmission systems data.\nCreate courses and trainings for industry and academia\nProvide a global open access database of PMU measurements\nBuilt an interconnection of laboratories for testing of algorithms\nContribute with high quality reports and standards for handling data in transmission systems.",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "CGMDT",
+            "name": "Cloud for Grid Modernization and Digital Transformation",
+            "type": "working group",
+            "url": "https://sites.google.com/view/cloud4powergrid/",
+            "chair": "Song Zhang;song.zhang@ieee.org",
+            "parent": "BDA",
+            "scope": "Continue organizing online/offline activities to bridge the gaps between the power industry and the cloud technology advancement\nSteer the development of cloud related industry standards, guidelines, and reports with various organizations such as NERC, CIGRE, EPRI and other IEEE TFs/WGs\nCreate additional white papers to incorporate new use cases and reflect technology landscape\nDevelop tutorials, workshops and hands-on labs that oriented to high-impact business use cases\nProvide a platform for power industry practitioners to share their experience and lessons learnt from cloud adoption",
+            "who-we-are": "Our Mission - demystify and democratize the cloud, facilitate the industry with use of cloud technology and services to accelerate grid modernization and empower digital transformation for utilities ",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "DA",
+            "name": "Data Access",
+            "type": "working group",
+            "url": "https://bigdata.seas.gwu.edu/",
+            "chair": "Hamed Mohsenian-Rad;hamed@ee.ucr.edu",
+            "parent": "BDA",
+            "scope": "The objective of the data accessing working group is to facilitate public access to power systems data to promote big data research and development. The electric power industry, interacting with one of the largest customer-serving critical networks and going through drastic rapid changes in both business and technical paradigms, is presenting limitless opportunities for big data studies. However, research and development on big data are not possible unless one has access to big data. Accordingly, the Big Data Access Working Group is proposed to facilitate such access in an organized and sustainable fashion by identifying and addressing the related practical obstacles.",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "ECIGE",
+            "name": "Edge Computing Infrastructure for Grid Edge Sensing and Control",
+            "type": "task force",
+            "url": "",
+            "chair": "Jamie Lian;lianj[at]ornl[dot]gov",
+            "parent": "BDA",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "DGCPS",
+            "name": "Data Governance in the Cloud for Power System Organizations",
+            "type": "task force",
+            "url": "",
+            "chair": "Tom Nudell;trn[at]piqenergy[dot]com",
+            "parent": "BDA",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "IDERE",
+            "name": "Integration of Distributed Energy Resources and Electric Vehicles Facilitated by Distribution System Data Modeling",
+            "type": "task force",
+            "url": "",
+            "chair": "Ioana Pisica;Ioana.Pisica[at]brunel[dot]ac[dot]uk",
+            "parent": "BDA",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "DSES",
+            "name": "Data Sharing in Energy Systems",
+            "type": "task force",
+            "url": "",
+            "chair": "Yi Wang;yiwang[at]eee[dot]hku[dot]hk",
+            "parent": "BDA",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "DAES",
+            "name": "Data Analytics for Energy Storage",
+            "type": "task force",
+            "url": "",
+            "chair": "Di Wu;di[dot]wu[at]pnnl[dot]gov",
+            "parent": "BDA",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "BDASR",
+            "name": "Big Data & Analytics for Security and Resilience of Power Systems",
+            "type": "task force",
+            "url": "",
+            "chair": "Jun Yan;jun[dot]yan[at]concordia[dot]ca",
+            "parent": "BDA",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "BDASW",
+            "name": "Big Data Analytics for Synchro-Waveform Measurements",
+            "type": "task force",
+            "url": "https://ieee-synchrowaveform.engr.ucr.edu/",
+            "chair": "Hamed Mohsenian-Rad;hamed@ee.ucr.edu",
+            "parent": "BDA",
+            "scope": "Waveforms are the most granular and authentic representation of voltage and current in power systems. With the latest advancements in power system sensor technologies, it is now possible to obtain time-synchronized waveform measurements, i.e., synchro-waveforms, from different locations of a power system. Synchro-waveforms can capture the most inconspicuous disturbances that are overlooked by other types of time-synchronized sensors, such as synchro-phasors. They also monitor system dynamics at much higher frequencies as well as much lower frequencies than the fundamental components of voltage and current that are commonly monitored by synchro-phasor data analytics tools. Therefore, synchro-waveforms introduce a new frontier to advance power system situational awareness, system dynamics tracking, incipient fault detection and identification, condition monitoring, and so on.\n\nBy collecting data at a much higher reporting rate than synchro-phasors, synchro-waveforms create a new challenge in Big Data Analytics (BDA) in power systems. ",
+            "who-we-are": "The IEEE Task Force on Big Data Analytics for Synchro-Waveform Measurements was established in July 2023 to promote big data analytics methodologies and applications of high-resolution waveform and synchro-waveform measurements in power systems. We seek to facilitate industry acceptance of this new data-intensive technology, identify challenges and opportunities, and encourage collaboration between academia and industry.",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "CAM",
+            "name": "Computing and Analytic Methods",
+            "type": "subcommittee",
+            "url": "https://cmte.ieee.org/pes-cams/",
+            "chair": "Hantao Cui;hcui9@ncsu.edu",
+            "parent": "AMPS",
+            "scope": "Our mission is to serve as a bridge between the technical areas of sophisticated analytical modeling/algorithms and state-of-the-art information technologies, especially the integration and computing methodologies.\nThe subcommittee is focused, dynamic, and energetic. We welcome new blood from power system engineers who are intenerated in the analytical algorithms, modeling, computer applications, and system integration to join our subcommittee. We also invite information technology (IT) professionals who like to contribute their knowledge and apply advanced IT to the power engineer society.",
+            "who-we-are": "This subcommittee is under the IEEE Power & Energy Society (PES), Analytic Methods for Power Systems (AMPS) Committee. We are one of the long history subcommittees in the PES.",
+            "visible": true,
+            "size": 5,
+            "color": "#CEECD0"
+        },
+        {
+            "id": "UPPRC",
+            "name": "Understanding, Prediction, Prevention and Restoration of Cascading Failures",
+            "type": "working group",
+            "url": "https://site.ieee.org/pes-cascading/",
+            "chair": "Emanuel Bernabeu;Emanuel.bernabeu@pjm.com",
+            "parent": "CAM",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "HPCGA",
+            "name": "High-Performance Computing for Grid Analysis",
+            "type": "working group",
+            "url": "https://site.ieee.org/pes-hpcgrid/",
+            "chair": "Zeb Tate;zeb.tate@utoronto.ca",
+            "parent": "CAM",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "CSPS",
+            "name": "Cyber Security in Power Systems",
+            "type": "working group",
+            "url": "",
+            "chair": "Manimaran Govindarasu;gmani@iastate.edu",
+            "parent": "CAM",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "PSMIC",
+            "name": "Power System Modeling and Integration Using CIM Standards",
+            "type": "working group",
+            "url": "",
+            "chair": "David Bogen;david.bogen@oncor.com",
+            "parent": "CAM",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "CADOP",
+            "name": "Computational Aspect of Distributed Optimization in the Power System",
+            "type": "working group",
+            "url": "https://cmte.ieee.org/pes-distopt/",
+            "chair": "Daniel Molzahn;molzahn@gatech.edu",
+            "parent": "CAM",
+            "scope": "This working group (WG) will focus on computational challenges and possible solutions to enable distributed\noptimization and associated control in the power system. Technical challenges include:\n Communication delays\n Tuning the parameters in the distributed optimization algorithm\n Time-varying operational conditions and network\n Uncertainties in problem parameters (loads, wind/solar generation, etc.)\nInformation access between computing agents\nNonlinearities resulting from, e.g., power flow model and device models\nImplementation and computing architectures\nConsideration of multiple performance criteria",
+            "who-we-are": "Centralized optimization algorithms are key to power system, planning and operation. With increasing size and complexity in the power grid with number of distributed Energy Resources (DERs), decision variables are going to explode, and centralized optimization do not offer scalable and robust solutions. Additionally, changes in operating conditions or events with highly local impacts requiring quick control actions and involving assets owned by different entities can be addressed in a better way by distributed monitoring and control specially with high penetration of DERs. Availability of high-resolution measurement data at faster rates also provides opportunities for distributed monitoring and control. Distributed control requires distributed sensing, distributed data processing, distributed optimization, hardware controller designed for distributed control and associated cyber infrastructure. Technical challenges include rigorous techniques for achieving robustness to communication delays and parameter uncertainties, ensuring convergence despite nonlinearities, and appropriately tuning algorithmic parameters for systems with a range of characteristics including operational constraints.",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "NTOFP",
+            "name": "New Tools for the operation of future Power System with very high penetration of renewable resources",
+            "type": "task force",
+            "url": "",
+            "chair": "Yuan Liu;yuan.liu@pnnl.gov",
+            "parent": "CAM",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "CCAPS",
+            "name": "Cloud Computing Applications for Power Systems",
+            "type": "task force",
+            "url": "",
+            "chair": "Yousu Chen;yousu.chen@pnnl.gov",
+            "parent": "CAM",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "PSUQU",
+            "name": "Power System Uncertainty Quantification and Uncertainty-Aware Decision-Making",
+            "type": "task force",
+            "url": "https://sites.google.com/view/uqforpower/",
+            "chair": "Lamine Mili;lmili@vt.edu",
+            "parent": "CAM",
+            "scope": "TF Scope: This TF aims to review the latest uncertainty-related research in academia, boost the uncertainty management in industry, and enhance the education in power system uncertainty management. Its main goals can be summarized as follows:\n1) discuss the latest progress on uncertainty modeling, forward and inverse uncertainty quantification and its associated techniques for decision-making under uncertainty in power systems;\n2) gather industry perspectives and provide solutions and recommendations to vendors, national labs, utilities, and ISOs in addressing the uncertainty for the enhancement of security and resiliency of electric power systems; and\n3) educate the next generation of power engineers for power system monitoring, operation, control, and planning applications and students in learning and using new tools.",
+            "who-we-are": "Uncertainty quantification in modern power-system operation and planning is attracting the attention of power researchers due to an increasing penetration of renewable energy resources, the stochasticity of the loads, and the advent of demand response to price, among others. These uncertainties can lead to dramatic fluctuations in the system states that may jeopardize the system operation, protection, and planning. Thanks to a large deployment of advanced sensors and communication technologies, power engineers are improving the quantification of the uncertainties in power systems. Subsequently, the methodologies to handle these uncertainty are also in a booming period. New methods based on machine learning and statistical and applied mathematics have been developed, which rely on modern-computing technologies, such as HPC and GPU. Although increasing efforts have been made, the scalability, computing efficiency and the economic cost of the proposed solution methods call for further improvement. Motivated by these challenges, this TF has been set up with the aim to provide a systematically way to simulate, quantify, manage, and mitigate these uncertainties in power systems and to facilitate the uncertainty management for the power industry.",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "PSAGH",
+            "name": "Power System Analysis on GPU and Heterogeneous Computing Architectures",
+            "type": "task force",
+            "url": "https://cmte.ieee.org/pes-psaghca/",
+            "chair": "Shrirang Abhyankar;shrirang.abhyankar@pnnl.gov",
+            "parent": "CAM",
+            "scope": "The scope of this task force is primarily with the Computer Analytical Methods (AMPS) committee.",
+            "who-we-are": "The task force aims to engage and inform the power system community on the developments on GPU and other heterogeneous architectures for accelerating power grid computation through reports documenting current best practices and gaps.\nMotivation:\nGraphics processing units (GPUs) are becoming ubiquitous with the influx of machine learning and gaming applications. The potential of GPUs and heterogeneous computing architectures (special accelerators, FPGAs) for accelerating scientific applications has been widely recognized. Over the next few years, the computing industry is expecting GPUs and heterogeneous architectures to be the mainstream hardware. These new architectures have great potential in high-performance analyses of large-scale power systems. However, most power grid people have heard about GPU and FPGA, but not clear how to use it. Software tools for deploying power system applications are still lacking. Successful applications and demonstrations are still in a nascent stage.",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "DIOA",
+            "name": "Decision Intelligence and Optimization Applications",
+            "type": "task force",
+            "url": "",
+            "chair": "Jason Morris;jason.morris@ieee.org",
+            "parent": "CAM",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "FMSAC",
+            "name": "Foundational Models for Situational Awareness, Computation, and Analysis",
+            "type": "task force",
+            "url": "https://cmte.ieee.org/pes-llm/",
+            "chair": "Shrirang Abhyankar;shrirang.abhyankar@pnnl.gov",
+            "parent": "CAM",
+            "scope": "The missions of this task force are:\n\nPromote knowledge exchange on foundation models and their applications for grid analysis and computation.\nFoster collaboration among researchers through webinar, panel session engagements.\nDiscuss and document advancements and usage of this technology through technical report(s) and papers.\nThe task force is technical focused and adopts vendor-neutral principle.",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "DSA",
+            "name": "Distribution System Analysis",
+            "type": "subcommittee",
+            "url": "",
+            "chair": "Arturo Bretas;asbreta@sandia.gov",
+            "parent": "AMPS",
+            "scope": "The SCOPE of the subcommittee is to\n\nInvestigate the development and application of analytical methodologies and computational techniques for solving, analysis, computing, application, and management of distribution system problems.\nSponsor and promote technical papers, technical sessions, and workshops for effective dissemination of technical knowledge related to the subcommittee activities.\nCoordinate such activities where appropriate with other IEEE committees and subcommittees.",
+            "who-we-are": "CORE FOCUS:\n\nComputational methods\nAlgorithm development\nSystem modeling and analysis\nData modeling\nApplications\nControl methods\nDesign tools\nTest systems\nData storage and recovery\nSECONDARY FOCUS:\n\nApplication of intelligent techniques\nPower quality and harmonic propagation\nProtection methods",
+            "visible": true,
+            "size": 5,
+            "color": "#CEECD0"
+        },
+        {
+            "id": "STDDS",
+            "name": "Spatial-temporal data for Distribution Systems",
+            "type": "working group",
+            "url": "",
+            "chair": "Nanpeng Yu;nyu@ece.ucr.edu",
+            "parent": "DSA",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "DTF",
+            "name": "Distribution Test Feeder",
+            "type": "working group",
+            "url": "https://cmte.ieee.org/pes-testfeeders/",
+            "chair": "Jason Fuller;jason.fuller@pnnl.gov",
+            "parent": "DSA",
+            "scope": "",
+            "who-we-are": "The Working Group began as an informal Task Force with four radial test feeders that were originally presented at the 1991 Winter Power Meeting. A fifth test feeder was added to focus on transformer connections. The paper was presented at the 2001 Winter Power Meeting and was published in the Transactions. You can find several papers on IEEE Xplore from panel sessions at various IEEE PES conferences up through 2009 where results for the test feeders were compared. Search for papers by Kersting, Dugan, and Carneiro, Jr., as well as others.",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "DSEPC",
+            "name": "Distribution State Estimations: Practical challenges, limitation of current tools and way forward",
+            "type": "working group",
+            "url": "",
+            "chair": "Ravindra Singh;Ravindra.Singh@anl.gov",
+            "parent": "DSA",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "DSSEP",
+            "name": "Distribution System State Estimation Performance Evaluation",
+            "type": "working group",
+            "url": "",
+            "chair": "Jens Schoene;jens@enernex.com",
+            "parent": "DSA",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "P1729",
+            "name": "P1729 Recommended Practices for Electric Power Distribution System Analysis ",
+            "type": "working group",
+            "url": "",
+            "chair": "none;none",
+            "parent": "DSA",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "ISA",
+            "name": "Intelligent System Applications",
+            "type": "subcommittee",
+            "url": "https://site.ieee.org/pes-iss/",
+            "chair": "G. Kumar Venayagammorthy;gvenaya@clemson.edu",
+            "parent": "AMPS",
+            "scope": "The Intelligent System Applications (ISA) Subcommittee investigates the development and applications of intelligent system methodologies and tools for problem-solving in power system engineering. These intelligent system techniques include expert systems, knowledge engineering, artificial neural networks, fuzzy logic, machine learning, evolutionary algorithms, and heuristic search methods.\n\nThe ISA Subcommittee organizes working groups and task forces that investigate innovative intelligent system methods and tools and their applications to power system engineering. This subcommittee sponsors technical sessions, tutorial courses, workshops, conferences, and other activities for the effective dissemination of state-of-the-art information within the technical area of the subcommittee. This subcommittee coordinates activities on intelligent system applications with other groups in IEEE Power Engineering Society and other technical organizations including CIGRE.",
+            "who-we-are": "Core Focus\nIntelligent methods\nAlgorithm development\nSystem modeling and analysis\nData modeling\nApplications\nDesign tools\nTest systems",
+            "visible": true,
+            "size": 5,
+            "color": "#CEECD0"
+        },
+        {
+            "id": "IDMA",
+            "name": "Intelligent Data Mining and Analysis",
+            "type": "working group",
+            "url": "https://site.ieee.org/psace-idma/",
+            "chair": "Zita A. Vale;zav@isep.ipp.pt",
+            "parent": "ISA",
+            "scope": "The Intelligent Data Mining and Analysis (IDMA) is an advanced technology in information processing to extract rules and knowledge from large databases systematically and analyze the nonlinear relationship between input and output variables in complex problems or phenomena. Data mining is a mature application in other areas like marketing. It is however relatively recent that the power industry has shown an interest in these techniques. Deep learning, another current hot topic is addressed in this WG.",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "ICS",
+            "name": "Intelligent Control Systems",
+            "type": "working group",
+            "url": "https://site.ieee.org/pes-iss/files/2013/08/IS_SubcommitteeIntControl_TF_Scope.pdf",
+            "chair": "G. Kumar Venayagammorthy;gvenaya@clemson.edu",
+            "parent": "ISA",
+            "scope": "This WG should:\n\nDevelop and standardize terminologies and definitions, and publish reports in appropriate PES Transactions.\nRecommend areas of research.\nOrganize panel sessions at various PES meetings.\nOrganize special sessions at various PES meetings.\nOrganize tutorials at various PES meetings.\nReport on task force activities to the subcommittee.\nAssist conference organizers and Transactions Editors with paper reviews.",
+            "who-we-are": "At the subcommittee meeting at PES2004 in Denver on June 7, 2004, it was suggested to\ncreate a task force on intelligent control. Dr. G K Venayagamoorthy was invited to\nsubmit a scope and to serve as the first chair of this task force. Approval will be sought at\nIS Subcommittee meeting and the PSACE Committee meeting which take place 10/12/04\nand 10/13/04. ",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "MAS",
+            "name": "Multi-Agent Systems",
+            "type": "working group",
+            "url": "https://site.ieee.org/pes-mas/",
+            "chair": "Tiago Pinto;tiagopinto@utad.pt",
+            "parent": "ISA",
+            "scope": "The IEEE Power & Energy Society Multi-Agent Systems Working group defines the drivers for and benefits gained by the use of multi-agent systems (MAS) in the field of power engineering.\n\nThe working group (WG) was formed by the IEEE Power & Energy Society Intelligent Systems Subcommittee to identify and disseminate the details of key technical challenges for the proper use of the technology within the power engineering domain.\n\nThe IEEE Power & Energy Society (PES) MAS WG aims to provide technical leadership in terms of recommendation and guidance on the appropriate use of standards, design methodologies, and implementation approaches.\n\nThe technical content on this new site is based on the MAS technical white paper we, as a WG, published in the IEEE Transactions on Power Systems. This is a starting point, and you are asked to contribute technical details, key publications, and other links which can be included. Use the Get Involved to contact us about updates and changes.\n\nOver time, this site is intended to become a key repository for all researchers working in MAS for energy applications.",
+            "who-we-are": "Multi-agent systems are an emerging technology which supports a variety of complex automation and communication task thus facilitating the integration of local and supervisory control. A multi-agent system is comprised of independent and autonomous software modules which are able to cooperate and negotiate with one another.",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "MHO",
+            "name": "Modern Heuristic Optimization",
+            "type": "working group",
+            "url": "https://site.ieee.org/psace-mho/",
+            "chair": "Istv\u00e1n Erlich;istvan.erlich@uni-due.de",
+            "parent": "ISA",
+            "scope": "",
+            "who-we-are": "The Working Group on Modern Heuristic Optimization (WGMHO) under the IEEE PES Analytic Methods in Power Systems (AMPS) Committee aims at identifying emerging developments in computational intelligence for solving power system optimization problems.\n\nThe transition of power systems worldwide towards widespread use of renewable energy sources and higher demand side response entails significant structural changes and new challenges in routine operation and planning activities. Within the framework of the so-called smart grid, many of these activities requires efficient solution of different types of optimization problems, whose mathematical complexity motivates further research and development on more powerful optimization methods.\n\nPioneer and recently introduced heuristic optimization methods are undergoing further extensions and developments by using novel high level mechanisms (metaheuristics) for improved search exploration and exploitation, including the possibility of using an ensemble of methods in a complementary manner (hybridization). Thus, the WGMHO will create task forces (TFs) to work on panels and tutorials on the application and benchmarking of these developments in all areas of the power and energy systems.\n\nAs an initial step, a special panel and competition was held at the 2014 IEEE PES General meeting, whose focus was on application of modern heuristic optimization methods for solving optimal power flow (OPF) problems. Guidelines and material related to the competition can be found here. Interested researchers are kindly encouraged to test their algorithms on the 2014 OPF test bed and to submit their results to J.L.RuedaTorres@tudelft.nl in case they beat the best results achieved so far.\n\nThis webpage is also intended to serve as a platform for dissemination of the activities of the WGMHO. This includes sharing experiences in the development and application of heuristic optimization algorithms, exchange of new ideas, and source codes.",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "ODS",
+            "name": "Open Data Sets",
+            "type": "task force",
+            "url": "https://site.ieee.org/psace-ods/",
+            "chair": "Zita A. Vale;zav@isep.ipp.pt",
+            "parent": "ISA",
+            "scope": "",
+            "who-we-are": "The IEEE Task Force (TF) on Open Data Sets makes power and energy-related data sets available whenever confidentiality and data property issues do not prevent their public use.\n\nThese data are intended to be used by researchers and other professionals working in power and energy-related areas requiring data for design, development, test, and validation purposes. These data should not be used for commercial purposes.",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "RRPA",
+            "name": "Reliability, Risk, and Probability Applications",
+            "type": "subcommittee",
+            "url": "https://cmte.ieee.org/pes-rrpa/",
+            "chair": "Visvakumar Aravinthan;visvakumar.aravinthan@wichita.edu",
+            "parent": "AMPS",
+            "scope": "The RRPA Subcommittee scope:\n\nStudy, review and foster the development, application and dissemination of probabilistic and other methods for dealing with reliability, uncertainty and risk assessment in the planning, design, operation and management of all phases of electric power systems.\nReview technical papers and conduct paper sessions, organize panel sessions, update or develop industry guides, and develop position papers.\nCooperate with other IEEE Committees and other professional and technical organizations in these activities.",
+            "who-we-are": "The Application of Probability Methods (APM) and the Reliability, Risk and Probability Methods (RRPA)\nCommittees have been instrumental over many decades in developing concepts, ideas and techniques relating to\npower system reliability modeling and applications, and for propagating these developments in the form of\nreports, papers, tutorials and panel sessions. The details of these historical developments are easily lost or\nforgotten with the passage of time. Therefore our goal in initiating this effort was to highlight the history of the\nApplication of Probability Methods Subcommittee which started in 1948 and renamed as the Reliability, Risk\nand Probability Applications Subcommittee in 1996.\nThis history document has been developed based on early subcommittee papers published, meeting minutes\navailable since 1974 (with a gap of 1982-1988 minutes), and notes kept by individual members. The activity\nwas initiated by RRPA SC Chair, Milorad Papic at the 2014 IEEE-PES GM. The overall preparation of this\nhistory document was coordinated by Murty Bhavaraju. The RRPA SC acknowledges the significant effort\ndevoted by Roy Billinton and Ronald Allan in preparing this document. In addition, we received inputs from\nother members, in particular, Milorad Papic, Joydeep Mitra, Chanan Singh, James McCalley, Doug Logan and\nLina Bertling Tjernberg.",
+            "visible": true,
+            "size": 5,
+            "color": "#CEECD0"
+        },
+        {
+            "id": "RA",
+            "name": "Resource Adequacy",
+            "type": "working group",
+            "url": "https://cmte.ieee.org/pes-rawg/",
+            "chair": "Genevieve de Mijolla;GdeMijolla@epri.com",
+            "parent": "RRPA",
+            "scope": "The RAWG provides a platform for discussion on industry practices associated with resource\nadequacy studies and related probabilistic resource assessment analyses. It reports annually\nto the RRPA Subcommittee. The group also assists on development and maintenance of IEEE\nstandards as requested by the AMPS Committee. ",
+            "who-we-are": "The Resource Adequacy Working Group (RAWG) provides a platform for discussion on industry practices associated with resource adequacy studies and related probabilistic resource assessment analyses. It fosters interaction between industry, regulatory bodies and academia.\n\nThe organises (at least annual) meetings with the purpose of:\n\nReviewing industry and academic probabilistic resource adequacy assessments.\nDiscussing probabilistic resource adequacy techniques developed.\nSharing expertise and experience regarding current probabilistic resource adequacy assessments, including consideration of historical analysis.\nThe RAWG is part of the IEEE Power and Energy Society. The Working Group falls under the Reliability, Risk and Probability Applications Subcommittee and the Analytic Methods for Power Systems Committee. Prior to 2019, the RAWG operated under the name LOLE Best Practices Working Group. More information about its origins can be found in this paper. The scope and procedures of the RAWG are described in the RAWG Operations and Procedures \u2013 July 2022.",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "PACME",
+            "name": "Probability Applications for Common Mode and dependent outage Events in Electric Power Systems",
+            "type": "working group",
+            "url": "https://cmte.ieee.org/pes-rrpa/working-groups/wg-on-probability-application-for-common-mode-events-pacme/",
+            "chair": "Milorad Papic;mpapic@idahopower.com",
+            "parent": "RRPA",
+            "scope": "",
+            "who-we-are": "The goal of the PACME Working Group is to review, advance and present state-of-the-art research and practical applications in the area of common-mode outage events. Issues to be considered include: data monitoring and collection, measuring, probabilistic modeling and evaluation in the planning and operation of power transmission systems. The Working Group is a coordinated effort among academic and industry researchers, practicing engineers, and government representatives.",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "762-2006",
+            "name": "Standard 762-2006 Reaffirmation",
+            "type": "working group",
+            "url": "",
+            "chair": "none;none",
+            "parent": "RRPA",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "RCECP",
+            "name": "Reliability Consideration in Emerging Cyber-Physical Energy System",
+            "type": "task force",
+            "url": "",
+            "chair": "none;none",
+            "parent": "RRPA",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "PSRME",
+            "name": "Power System Resilience Metrics and Evaluation Methods",
+            "type": "task force",
+            "url": "https://cmte.ieee.org/pes-psrmem/",
+            "chair": "Mohammed Ben-Idris;mbenidris@unr.edu",
+            "parent": "RRPA",
+            "scope": "",
+            "who-we-are": "Extreme events are not rare anymore and their impacts on power grid resilience has already become obvious. This Task Force addresses the advances in power system resilience modeling, metrics, and analysis. System resilience will be discussed in terms of the ability of a system to function within an acceptable level of operation; and of its preparedness to disturbances and attacks. This Task Force will be focused on power system resilience metrics and evaluation methods that fall within resilience attributes. It will contribute to the development of resilience metrics that can lead to narrowing the gap toward standardized and universally accepted metrics, definitions, and indices.",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "CSR",
+            "name": "Composite System Reliability",
+            "type": "task force",
+            "url": "",
+            "chair": "none;none",
+            "parent": "RRPA",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "TAS",
+            "name": "Transient Analysis and Simulations",
+            "type": "subcommittee",
+            "url": "https://site.ieee.org/sa-tass/",
+            "chair": "Xiaoyu Wang;xiaoyuwang3@cunet.caleton.ca",
+            "parent": "AMPS",
+            "scope": "Analysis of the transmission and distribution system transient phenomena in their broadest sense; modeling and analysis of power system including distributed resources, power system switching, dynamic and temporary overvoltages, ferroresonancee phenomenon, and insulation coordination; advanced digital simulation techniques of power system transients and faults; State-of-the-art simulation and analysis of FACTS and other custom power devices, power system transient measurement techniques; geomagnetically induced currents, and etc.",
+            "who-we-are": "",
+            "visible": true,
+            "size": 5,
+            "color": "#CEECD0"
+        },
+        {
+            "id": "MASTD",
+            "name": "Modeling and Analysis of System Transients using Digital Programs",
+            "type": "working group",
+            "url": "",
+            "chair": "Pablo Gomez;pablo.gomez@wmich.edu",
+            "parent": "TAS",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "RTSPE",
+            "name": "Real-Time Simulation of Power & Energy Systems",
+            "type": "task force",
+            "url": "",
+            "chair": "Omar Faruque;faruque@caps.fsu.edu",
+            "parent": "MASTD",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "ITSTS",
+            "name": "Interfacing Techniques for Simulation Tools in Smart Grid",
+            "type": "task force",
+            "url": "",
+            "chair": "Qiuhua Huang;qiuhua.huang@ieee.org",
+            "parent": "MASTD",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "DAMT",
+            "name": "Dynamic Average Modeling Techniques",
+            "type": "task force",
+            "url": "",
+            "chair": "Seyyedmilad Ebrahimi;s.ebrahimi@wsu.edu",
+            "parent": "MASTD",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "DPMT",
+            "name": "Dynamic Phasor Modeling Technique",
+            "type": "task force",
+            "url": "",
+            "chair": "Shaahin Filizadeh;Shaahin.Filizadeh@umanitoba.ca",
+            "parent": "MASTD",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "URCEM",
+            "name": "Use of Real-Code in EMT Models for Power System Analysis",
+            "type": "task force",
+            "url": "",
+            "chair": "Garth Irwin;gdi@electranix.com",
+            "parent": "MASTD",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "MESS",
+            "name": "Multi-Energy System Simulation",
+            "type": "task force",
+            "url": "",
+            "chair": "Peter Palensky;P.Palensky@tudelft.nl",
+            "parent": "MASTD",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "IBRTF",
+            "name": "IBR SSO TF",
+            "type": "task force",
+            "url": "",
+            "chair": "Lingling Fan;linglingfan@usf.edu",
+            "parent": "MASTD",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "PEVG",
+            "name": "Power Equipment Vulnerability to GIC",
+            "type": "task force",
+            "url": "",
+            "chair": "Afshin Rezaei-Zare;rezaei@yorku.ca",
+            "parent": "MASTD",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "ESLPS",
+            "name": "EMT Simulation of Large Power Systems",
+            "type": "task force",
+            "url": "",
+            "chair": "Yi Zhang;yzhang@rtds.com",
+            "parent": "MASTD",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "FERRO",
+            "name": "Ferroresonance",
+            "type": "working group",
+            "url": "",
+            "chair": "Bruce Mork;bamork@mtu.edu",
+            "parent": "TAS",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "GDGAI",
+            "name": "Geomagnetic disturbance (GMD) and Geomagnetic ally Induced Current (GIC)",
+            "type": "working group",
+            "url": "",
+            "chair": "Bob Arritt, EPRI;barritt@epri.com",
+            "parent": "TAS",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "FMOTA",
+            "name": "Field Measured Overvoltages and Their Analysis",
+            "type": "working group",
+            "url": "",
+            "chair": "Ilhan Kocar;ilhan.kocar@polymtl.ca",
+            "parent": "TAS",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "DERID",
+            "name": "Distributed Energy Resource Islanding Detection",
+            "type": "task force",
+            "url": "",
+            "chair": "Alexandre Nassif;nassif@gmail.com",
+            "parent": "TAS",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "PSOPE",
+            "name": "Power System Operations, Planning & Economics",
+            "type": "committee",
+            "url": "https://site.ieee.org/pes-psope/",
+            "chair": "Fran\u00e7ois Bouffard;francois.bouffard@mcgill.ca",
+            "parent": "PES",
+            "scope": "",
+            "who-we-are": "",
+            "visible": true,
+            "size": 8,
+            "color": "#FBECA6"
+        },
+        {
+            "id": "BPSO",
+            "name": "Bulk Power System Operation",
+            "type": "subcommittee",
+            "url": "https://site.ieee.org/pes-psope/subcommittees/bulk-power-system-operation-subcommittee/",
+            "chair": "Anurag Srivastava;anurag.srivastava@mail.wvu.edu",
+            "parent": "PSOPE",
+            "scope": "The Bulk Power System Operation Subcommittee disseminates information on how and what power system operators do to operate the interconnected bulk power systems at control centers, with the objectives of safety, reliability and operational efficiency. To achieve these objectives, they need to perform a number of functions and their associated tasks.  Some of the major functions that Operators need to execute include:\n\nTransmission Monitoring\nTransmission Limit Assessment\nTransmission Voltage Management\nTransmission Congestion Management\nTransmission Outage Management\nLoad Shedding Management\nGeneration Load Balance\nGeneration Operation\nGeneration Reserve Management\nGeneration Outage Management\nInterchange Communication\nInterchange Monitoring\nInterchange Congestion Management\nInterchange Operation\nEmergency Generation Capacity Management\nEmergency Load Shedding Management\nEmergency Transmission Management\nSystem Restoration",
+            "who-we-are": "The Subcommittee also highlights the R&D needs to support this power system operation discipline.  In control centers, SCADA/EMS Systems and Wide Area Monitoring, Protection and Control (WAMPAC) Systems with the appropriate application software are installed to operate the power systems.  The major focus is on how bulk power systems (i.e., power delivery systems that are at voltage levels higher than the voltage level of distribution systems) are operated and dispatched in the face of evolving electricity market design and economics rules; changing environmental regulations; fast adoption of power electronics, high voltage DC and AC technologies and synchrophasors; and  increasing penetration of renewable resources (both as utility scale and distributed installations) and demand-side resources.\n\nIn addition, with the industry facing aging workforce, this Subcommittee also addresses the issue of operator training, knowledge management and asset management.\n\nThe time scale of interest in this Subcommittee covers system operations in the real-time, short term and operations planning time frames.  Under the operations planning time frame, it also addresses outage management issues to ensure power system reliability. Items of particular interest could cover the following:\n\nReliability and security assessment\nOperational planning\nControl center technologies\nOperator training\nSituation awareness and visualization\nNetwork modeling management\nEnergy Management System (EMS)\nShort term outage scheduling and management\nUnit scheduling and dispatch\nTransmission congestion management\nSystem restoration\nSystem control performance\nOperational impact of renewable resources\nAutomation and control technologies\nGas pipeline modeling\nShort term and very short term forecast: load, wind, solar PV and interchange",
+            "visible": true,
+            "size": 5,
+            "color": "#CEECD0"
+        },
+        {
+            "id": "PSSDS",
+            "name": "Power System Static and Dynamic State Estimation",
+            "type": "working group",
+            "url": "https://cmte.ieee.org/pes-pssdse/",
+            "chair": "Lamine Mili;lmili@vt.edu.",
+            "parent": "BPSO",
+            "scope": "The particular topics of interest include, but are not limited to, the followings:\n\nDiscuss the latest progress of static state estimation (hybrid state estimation, linear state estimation, and forecasting-aided state estimation), and dynamic state and parameter estimation algorithms, as well as their applications\nGather industrial prospectives and provide solutions and recommendations to vendors, national labs, utilities, and ISOs in using dynamic state and parameter estimation for enhancement of the security and resiliency of electric power systems\nEducate the next generation of power engineers for dynamic state estimation enabled power system modeling, monitoring, operation, control, and protection applications and students in learning and using new tools.",
+            "who-we-are": "The WG on State Estimation Algorithms was created in the early 1990\u2019s. Its main aims are to discuss the latest progress of state estimation algorithms, gather industrial prospectives and propose solutions for practical problems, educate the next generation of power engineers for control center applications and students in learning and using new tools. With the increasing penetration of DERs, responsive loads, and microgrids, the power system has been subject to different types of dynamics. The majority of today\u2019s monitoring and control tools at the control center EMS are based on steady-state power system models, which cannot capture the system dynamics. With the large deployment of advanced sensor and communication technologies, such as wide-area measurement systems on the power transmission systems worldwide,  the development of dynamic state estimation, and other novel methods and tools for the power system, modeling, monitoring, operation, control and protection becomes possible and essential.",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "DPSE",
+            "name": "Dynamic Parameter and State Estimation",
+            "type": "task force",
+            "url": "https://sites.google.com/site/zhaojunbob/ieee-tf-dynamic-state-estimation?authuser=0",
+            "chair": "Junbo Zhao;junbo@ece.msstate.edu",
+            "parent": "PSSDS",
+            "scope": "Subtasks and Leaders [here] \n\nMotivations, concepts, state-of-the-art of DSE; DSE vs SSE, DSE vs FASE; an IEEE transactions paper is ongoing for that;\n\nEstimate important parameters of generators and its associated controllers, dynamic load, transformers for model validation and calibration;\n\nEstablish standard test system with appropriate dynamical model and parameters for DSE testing, comparison and its related applications;\n\nAddress model and measurement uncertainties, observability using Lie-derivatives, data quality issues, non-Gaussian noise, cyber attacks, and multiple sources of data fusions;\n\nUse cases for power system control, protection, dynamic security assessment, model validation and calibration.",
+            "who-we-are": "The widespread deployment of synchrophasor measurement units on power transmission grids has made possible the real-time monitoring and control of power system dynamics. However, these functions may not be reliably achieved without the development of a fast and robust dynamic state estimator (DSE). Indeed, the estimated synchronous machines state variables can be used by power system stabilizers, automatic voltage regulators, and under-frequency relays to enhance small signal stability and to initiate generation outages and load shedding during transient instabilities, etc. During the 2017 IEEE Power Engineering General Meeting held at Chicago, the Working Group on State Estimation Algorithms decided to form a 3-year long task force on \u201cPower System Dynamic State and Parameter Estimation\u201d with an objective to define its concepts, demonstrate its values for enhanced power system online monitoring and control as well as power engineering educations.",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "STCPS",
+            "name": "Standard Test Cases for Power System State Estimation",
+            "type": "task force",
+            "url": "https://cmte.ieee.org/pes-pssdse/wp-content/uploads/sites/119/2020/09/TF-Proposal_Standard-Test-Systems.pdf",
+            "chair": "Mert Korkali;korkali1@llnl.gov",
+            "parent": "PSSDS",
+            "scope": "Goals for the Task Force\nBased on IEEE standard test power systems, create the following\nstandard test cases for state estimation research and evaluation.\n(1) Measurement configurations for SCADA, PMU, and hybrid cases\nwith low, median, and high redundancy levels.\n(2) Divergence cases due to measurement errors, model parameter\nerrors, topology errors, and system disturbances.\n(3) Measurement noise that follows Gaussian distribution and nonGaussian distributions.\n(4) Representative cases of measurement, parameter, and topology\nerrors.",
+            "who-we-are": "the Task Force aims to develop standard test cases for\nevaluating the performances of state estimation algorithms.\n\u2022 Existing knowledge gap:\nOver the past decades, a wide variety of power system state\nestimation methods have been proposed and implemented.\nAlthough IEEE standard test systems can be used for these studies,\nthey lack sufficient details for implementing and comparing various\nstate estimation algorithms. Researchers have to design their own\ntest cases with detailed measurement types, configuration, noise,\ngross errors, and parameter and topology errors etc.. This creates\nunnecessary burden and inconvenience for researchers, and results\nin a lack of comparability and repeatability of proposed algorithms\nand test results.",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "SECT",
+            "name": "State Estimation Concepts and Terminology",
+            "type": "task force",
+            "url": "",
+            "chair": "none;none",
+            "parent": "PSSDS",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "PSR-",
+            "name": "Power System Restoration",
+            "type": "working group",
+            "url": "",
+            "chair": "Martin Braun;none",
+            "parent": "BPSO",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "OTER",
+            "name": "Operational Tools for Enabling Resiliency",
+            "type": "task force",
+            "url": "",
+            "chair": "Marija Ilic;;none",
+            "parent": "PSR-",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "CPIPS",
+            "name": "Cyber-Physical Interdependence for Power System Operation and Control",
+            "type": "task force",
+            "url": "",
+            "chair": "Junbo Zhao;junbo@ece.msstate.edu",
+            "parent": "PSR-",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "AITRP",
+            "name": "Advanced Intelligence Techniques for Resilient Power System Restoration",
+            "type": "task force",
+            "url": "",
+            "chair": "Jin Zhao;none",
+            "parent": "PSR-",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "SAPSO",
+            "name": "Synchrophasor Applications in Power System Operation and Control",
+            "type": "task force",
+            "url": "",
+            "chair": "Anurag Srivastava;anurag.srivastava@mail.wvu.edu",
+            "parent": "BPSO",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "WPN",
+            "name": "Water-Power Nexus",
+            "type": "task force",
+            "url": "",
+            "chair": "Rebecca O\u2019Neil;none",
+            "parent": "BPSO",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "RMBPS",
+            "name": "Risk Mitigation in Bulk Power System Operation",
+            "type": "task force",
+            "url": "",
+            "chair": "Hong Chen;Hong.Chen@pjm.com",
+            "parent": "BPSO",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "BPSOV",
+            "name": "Bulk Power System Operations with Variable Generation",
+            "type": "task force",
+            "url": "",
+            "chair": "Aidan Tuohy;none",
+            "parent": "BPSO",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "RTCA",
+            "name": "Real-Time Contingency Analysis",
+            "type": "task force",
+            "url": "",
+            "chair": "Sarma (NDR) Nuthalapati;none",
+            "parent": "BPSO",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "NGEAF",
+            "name": "Next-Generation EMS for Advanced future bulk power systems: Challenge, Architecture and Concept",
+            "type": "task force",
+            "url": "",
+            "chair": "Pengwei Du;pengwei.du@ercot.com",
+            "parent": "BPSO",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "VCSG",
+            "name": "Voltage Control for Smart Grids",
+            "type": "task force",
+            "url": "",
+            "chair": "Hongbin Sun;none",
+            "parent": "BPSO",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "BPSP",
+            "name": "Bulk Power System Planning",
+            "type": "subcommittee",
+            "url": "https://site.ieee.org/pes-psope/subcommittees/bulk-power-system-planning-subcommittee/",
+            "chair": "Rui Bo;rbo@mst.edu",
+            "parent": "PSOPE",
+            "scope": "The Bulk Power System Planning Subcommittee disseminates information to the industry on how and what power system planners have to do to ensure the resource adequacy, reliability and resiliency of the interconnected bulk power systems;  and the economics, environmental sustainability and financial soundness of energy resource portfolios,  while facing evolving government regulations and policies (e.g., carbon emission initiatives),  changing business environment, (e.g., renewable and demand-side resources, distributed and centralized resource availability, and asset management) and uncertainties.\n\nThis Subcommittee also highlights the long term issues to support this bulk power system planning discipline.  The major focus is on how bulk power systems (i.e., power delivery systems that are at voltage levels higher than the MV distribution systems) are planned. Items of particular interests could include the following:\n\nResource adequacy and fuel diversity\nResource integration, including conventional, renewable, storage device,  demand-side, and distributed  resources integration\nTransmission planning\nInterconnection planning, including long-term outage coordination\nInter-regional and intra-regional planning\nLong-term demand forecast at the system level or circuit level\nRenewable resource forecasts in power system planning\nGas and electric coordination in power system planning",
+            "who-we-are": "",
+            "visible": true,
+            "size": 5,
+            "color": "#CEECD0"
+        },
+        {
+            "id": "IRP",
+            "name": "Integrated Resource Planning",
+            "type": "working group",
+            "url": "",
+            "chair": "Amy Li;Amy.Li@sce.com",
+            "parent": "BPSP",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "TSP",
+            "name": "Transmission System Planning",
+            "type": "working group",
+            "url": "",
+            "chair": "Sundar Venkataraman;none",
+            "parent": "BPSP",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "APSF",
+            "name": "Assessment of Power System Flexibility",
+            "type": "working group",
+            "url": "",
+            "chair": "Eamonn Lannoye;none",
+            "parent": "BPSP",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "IESMN",
+            "name": "Integrated Energy System/Multi-energy Network Modeling and Planning",
+            "type": "working group",
+            "url": "",
+            "chair": "Xinwei Shen;none",
+            "parent": "BPSP",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "AMCIP",
+            "name": "Advanced Methods for Computational Intensive Power System Planning Applications ",
+            "type": "task force",
+            "url": "https://site.ieee.org/pes-cipspa/",
+            "chair": "Rui Bo;rbo@mst.edu",
+            "parent": "BPSP",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "DBCIB",
+            "name": "Design BPS-Connected Inverter-Based Resource (IBR) Models for Grid Planning",
+            "type": "task force",
+            "url": "https://sites.google.com/view/bps-ibrmodels/home",
+            "chair": "Lingling Fan;linglingfan@usf.edu",
+            "parent": "BPSP",
+            "scope": "",
+            "who-we-are": "The goal of the proposed task force is to design a set of BPS-connected IBR models for grid planning. Those models are efficient for computation. They can be input/output frequency-domain admittance models, or white-box models with structures known and parameters learned from experiment data. With those models, abnormal behavior of IBRs is expected to be detected at the planning stage before IBRs are put into operation. \n\nThis task force will provide a platform for people with different backgrounds to contribute to IBR planning. Grid planners, modeling experts, power electronics experts, and control experts will work together to achieve the following two outcomes: \n\nDevelop fundamental understanding on various possible IBR dynamics due to IBR and grid interactions. \n\nDevelop a set of tools to facilitate IBR planning model development and develop tutorials on how to use those tools.\n",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "DSOP",
+            "name": "Distribution System Operation and Planning",
+            "type": "subcommittee",
+            "url": "https://site.ieee.org/pes-psope/subcommittees/distribution-system-operation-and-planning-subcommittee/",
+            "chair": "Nanpeng Yu;nyu@ece.ucr.edu",
+            "parent": "PSOPE",
+            "scope": "The Distribution System Operation and Planning Subcommittee focuses on both the power system planning and operations of electric distribution systems. On the system planning front, the Subcommittee disseminates information on the methods and techniques for planning sustainable, reliable and cost-effective distribution systems, considering the transition from contemporary to future customers and business processes, as well as the use of automation and control technologies, distributed energy resources, distributed generation, renewable resources of utility scale and at customer sites, demand response, EVs, energy storage, virtual power plants, microgrids, two-way power flow, and DC systems.  Active Circuit Planning is emerging as the center stage for distribution system planning.\n\nOn the system operations front, this Subcommittee disseminates information on what and how Distribution Management Systems (SCADA/DMS) systems in Distribution System Control Centers would be used to operate the distribution systems so as to meet the system operations objectives of high system reliability, environmental sustainability and operational efficiency, using application software such as Advanced Distribution Automation, Integrated Volt/Var Control, Fault Location Isolation and Service Restoration, and Demand Response Management System, and the use of associated communications infrastructure.  Advanced Distribution Management Systems, which includes the integration of SCADA/DMS with Outage Management Systems, and its interfaces with Business Enterprise IT Systems (including Enterprise Service Bus [ESB], Geographic Information Systems [GIS], Advanced Metering Infrastructure [AMI], Mobile Workforce Management Systems [MFWM], Damage Assessment, etc.) using industry standards is an integral part of this Subcommittee\u2019s system operations front.\n\nSince distribution system business is undergoing significant changes, the Subcommittee also covers emerging topics related to distribution system planning and operations.  Such topics including Distributed Energy Resource Management Systems (DERMS),  development of Sustainable Energy Communities in developing nations, Asset Management and Asset Condition Monitoring, and test distribution systems to facilitate planning and operations analysis of new technologies or engineering practices.\n",
+            "who-we-are": "",
+            "visible": true,
+            "size": 5,
+            "color": "#CEECD0"
+        },
+        {
+            "id": "MFDSP",
+            "name": "Modern & Future Distribution System Planning",
+            "type": "working group",
+            "url": "",
+            "chair": "none;none",
+            "parent": "DSOP",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "AM-",
+            "name": "Asset Management",
+            "type": "working group",
+            "url": "",
+            "chair": "Tony McGrail;tmcgrail@doble.com",
+            "parent": "DSOP",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "DMS",
+            "name": "Distribution Management System",
+            "type": "working group",
+            "url": "",
+            "chair": "Terry Nielsen;terry.nielsen@gridbright.com",
+            "parent": "DSOP",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "SESDC",
+            "name": "Sustainable Energy Systems for Developing Communities",
+            "type": "working group",
+            "url": "https://site.ieee.org/pes-sesdc/",
+            "chair": "Henry Louie;louieh@seattleu.edu",
+            "parent": "DSOP",
+            "scope": "Respecting social norms, traditions, and cultures, the Working Group collaborates with stakeholders to provide practical recommendations to facilitate environmentally-safe, measurable, and cost-effective sustainable energy system technologies and solutions to enhance economic and social viability, standard of living, and quality of life of people living in developing communities\n\nAreas of Interest\n\nOff-grid energy project sustainability indicators & frameworks\nSustainability/Survivability of projects\nSuccessful business models for rural and peri-urban electricity service\nRural Electrification\nTechnical Capacity building for sustainable rural electrification\nEducational needs for NGO-led electrification interventions\nElectric and non-electric solutions: evaluation of appropriateness for the need;\nGender and equality in energy access\nProductive use of energy\nEntrepreneurship training for sustainable electrification\nCommunity based business models in rural electrification\nSafe end of life disposal and management of batteries and other local environmental impacts\nCommunity awareness and engagement in rural electrification\nAssessing the viability of mini/micro-grids in developing countries\nGeo-spatial electricity distribution planning in developing countries\nForecasting and planning tools for micro-grids",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "EUOGA",
+            "name": "Energy Use in Off-grid Applications",
+            "type": "task force",
+            "url": "https://site.ieee.org/pes-sesdc/output/task-forces/energy-use-in-off-grid-applications/",
+            "chair": "Peter Dauenhauer;peter.dauenhauer@gmail.com",
+            "parent": "SESDC",
+            "scope": "",
+            "who-we-are": "This task for has creating an archive of time series data of off-grid electric power systems and user applications in developing communities.  Version 1 of the archive is now available and was drawn from projects affiliated with SESDC Members and other available sources. The archive is classified as open-source and available for general research use.  We are requesting contributors reach out the task force with available data-sets to expand the current set.",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "ENAL",
+            "name": "Electrification on Native American Lands",
+            "type": "task force",
+            "url": "https://site.ieee.org/pes-sesdc/output/task-forces/electrification-on-native-american-lands/",
+            "chair": "none;none",
+            "parent": "SESDC",
+            "scope": "Worldwide approximately 800 million people do not have access to the electricity grid. This form of energy poverty disproportionately afflicts the rural poor, primarily in Sub-Saharan Africa. Often overlooked is that there are as many as 100,000 people living on tribal lands in North, Central, and South America without electricity. This can stifle development and impede improvements in the quality of life. The purpose of this Task Force is to conduct research and engage in practical activities aimed at understanding and improving electricity access to homes, businesses, and communities on tribal lands. Secondary goals of the Task Force is to increase awareness and improve education on this topic, and to provide networking and community-building opportunities for students, practitioners, researchers, and the general public.\n\nResearch activities and outputs may include: review of state-of-the-art, collection of field data, synthesis of data, development of new technologies, dissemination of new research and data sets through publications, presentations and panels, and data sets. Other practical activities may include sharing best practices, creation and dissemination of load profiles and other data, and providing project specific advice. Outputs related to awareness, education and networking include: arranging and hosting webinars and presentations, uplifting voices from within affected tribal communities, offering tutorials, and arranging social interactions at IEEE PES meetings.\n\nWhenever possible, the activities and outputs of the Task Force shall be collaborative with local communities and seek to increase capacity among students, researchers, and practitioners that identify has having tribal heritage. The Task Force acknowledges the history of exploitive interactions with outside researchers, and will follow best-practices related to data sovereignty, energy sovereignty and human subjects research.",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "MGPFT",
+            "name": "Micro-grids Pre-feasibility toolkit",
+            "type": "task force",
+            "url": "https://site.ieee.org/pes-sesdc/output/task-forces/micro-grids-pre-feasibility-toolkit/",
+            "chair": "Robert Nutter;Robert.C.Nutter@outlook.com",
+            "parent": "SESDC",
+            "scope": "This task force will focus on the technical, social and economic challenges and opportunities that can present themselves in both AC and DC microgrids. The objective of this task force is to develop a set of tools for determining the pre-feasibility of a micro-grid in the context of developing communities.  The toolkit aims to enhance the capacity of communities and NGO partners, with limited skills and knowledge in sustainable energy issues, to produce a initial set of materials to support initial micro-grid investments.",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "FTSOD",
+            "name": "Future TSO-DSO Interaction: Challenges, Business Cases and Solutions",
+            "type": "task force",
+            "url": "",
+            "chair": "Gareth Taylor;gareth.taylor@brunel.ac.uk",
+            "parent": "DSOP",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "PSE",
+            "name": "Power System Economics",
+            "type": "subcommittee",
+            "url": "https://site.ieee.org/pes-psope/subcommittees/power-system-economics-subcommittee/",
+            "chair": "Erik Ela;eela@epri.com",
+            "parent": "PSOPE",
+            "scope": "The Power System Economics Subcommittee (PSE SC) disseminates information to industry on the design and operation of electricity markets, as well as underlying issues surrounding power system economics and regulatory frameworks. The PSE SC is involved in the following five thematic areas.\n\nInvestigating and studying all phases of engineering economics as it affects the planning, design, and operations of power systems, pricing of services, and design and monitoring of electricity markets.\nDeveloping methods for the economic evaluation of generation, transmission, and distribution facilities, including the determination of optimum overall capital and operating costs and strategies for hedging risks.\nDetermining incremental costs of providing power generation, transmission, distribution and delivery services and methods of price determination.\nAnalyzing all aspects of electricity markets, including congestion management and pricing, market power, incentives for operational and planning decisions, and effects of alternative market structures.\nPromoting understanding of sound economics amongst engineers and promote sound engineering principles in the design of electricity markets.\nItems of particular interest to the PSE SC include:\n\nelectricity market design, operation, and analysis;\ninvestments in power systems;\neconomics of generation, transmission and distribution, and storage of electricity;\neconomics of power system operation;\nfinancial risk management;\neconomics of emerging technologies; and\ncoordination of natural gas and electricity markets.",
+            "who-we-are": "",
+            "visible": true,
+            "size": 5,
+            "color": "#CEECD0"
+        },
+        {
+            "id": "BMES",
+            "name": "Business Models for Energy Storage",
+            "type": "working group",
+            "url": "https://site.ieee.org/pes-psope/subcommittees/power-system-economics-subcommittee/working-group-on-business-models-for-energy-storage/",
+            "chair": "Yury Dvorkin;yvd204@nyu.edu",
+            "parent": "PSE",
+            "scope": "This WG came to being at the 2011 IEEE Power & Energy Society General Meeting has been active since. The objective of the working group has been to engage various stakeholders and promote a better business case for grid-scale energy storage. The WG\u2019s scope of work is:\n\nFocus on economics: building business cases and performance-based economic evaluation\nReviews of global energy storage project-development cases and new technology development\nPerformance-based economic evaluation on emerging grid applications (e.g., ancillary service, transmission system optimization, microgrid design, smart grid)\nMarket design, policy, and regulatory recommendations to accommodate energy storage and its myriad applications",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "DR",
+            "name": "Demand Response",
+            "type": "working group",
+            "url": "https://site.ieee.org/pes-psope/subcommittees/power-system-economics-subcommittee/working-group-on-demand-response/",
+            "chair": "Gregor Verbic;gregor.verbic@sydney.edu.au",
+            "parent": "PSE",
+            "scope": "This WG is focused on identifying emerging demand response technologies, developing methods for performance evaluation and cost-benefits studies of demand response, and investigating market schemes that can provide economic incentives for demand response. The goal of the WG is to identify the criteria for evaluating demand response technologies and developing business models for demand response as energy and ancillary service products.",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "TSEA",
+            "name": "Test Systems for Economic Analysis",
+            "type": "working group",
+            "url": "https://site.ieee.org/pes-psope/subcommittees/power-system-economics-subcommittee/working-group-on-test-systems-for-economic-analysis/",
+            "chair": "Xiaoping Zhang;x.p.zhang@bham.ac.uk",
+            "parent": "PSE",
+            "scope": "This WG is focused on providing validated test systems (or test cases) of electric power systems including economic data. Thus, these test systems are analogous to the IEEE Reliability Test Systems. The general scope of the WG is to:\n\nIdentify the need for IEEE test systems for economic systems\nProvide recommendations of \u201cstandardized\u201d economic data for economic analyses\nDiscuss methodologies for deriving test systems, including by modeling real power systems and by amending available IEEE test systems with economic data\nAssemble test systems that represent economic information that would be useful as \u201ceconomic test systems\u201d\nProvide an electronic centralized pool of test systems",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "EFA",
+            "name": "Energy Forecasting and Analytics",
+            "type": "working group",
+            "url": "https://site.ieee.org/pes-psope/subcommittees/power-system-economics-subcommittee/working-group-on-energy-forecasting-and-analytics/",
+            "chair": "Jethro Browell;jethro.browell@glasgow.ac.uk",
+            "parent": "PSE",
+            "scope": "Scopes:\n\u2013Energy forecasting:\n-Forecasting objectives: load, renewable energy, price; individual consumer load, demand response, EV charging load, net load, wind power ramp; power, gas, heat, and cooling demands; reserve capacity, risk, network congestion;\n-Forecasting algorithms: traditional regression, advanced machine learning, deep learning, transfer learning, ensemble learning, robust forecasting;\n-Forecasting outputs: point forecasting, probabilistic forecasting, hierarchical forecasting, cost-oriented forecasting;\n-Forecasting evaluation: Alternative loss functions for different forecasting objectives and different applications.\n\u2013Energy Analytics:\n-Data preprocessing: outlier detection, data cleansing, feature selection, data compression;\n-Behavior modeling: load profiling, energy theft detection, renewable energy spatiotemporal correlation analysis, pattern recognition, sensitivity analysis, load or renewable energy simulation;\n-Applications: demand response implementation, data-driven pricing, bidding, and trading, topology identification, outage and risk management, privacy concerns.",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "TI",
+            "name": "Technologies and Innovation",
+            "type": "subcommittee",
+            "url": "https://site.ieee.org/pes-psope/subcommittees/technologies-and-innovation-subcommittee/",
+            "chair": "Alfredo Vaccaro;vaccaro@unisannio.it",
+            "parent": "PSOPE",
+            "scope": "The Technologies and Innovation Subcommittee addresses new technologies, innovation and support needed to ensure proper power system planning, operation and electricity market operation.  The need for innovations arises because of the changing business environment and technology offerings.\n\nAlong this innovation front, this Subcommittee focuses on the following areas: (1) the need to address flexibility (e.g., to accommodate the intermittency of renewable resources, to provide centralized and distributed intelligence control capabilities) in power system planning and operations, whether at the transmission or the distribution system levels; and (2) the need to integrate new technologies, such as PMU, FACTS, HVDC, Dynamic Line Rating, EV, virtual power plants, microgrids and energy storage in power system planning and operations; and (3) modeling and security aspects of news technologies related to power system planning and operations.\n\nAlong the support front, this Subcommittee focuses on the following areas: (1) Forecasting of load, renewable resources, and market prices for power system planning and operations, as well as market operation; (2) Control Center Software development to support new applications such as those needed for WAMPACS and IDRMS; and (3) Asset management and asset condition monitoring to ensure high availability of grid asset in the most economical manner. (4) Coordinated transmission and distribution system planning and operations.\n\nThis Subcommittee will actively collaborate together with other groups and subcommittees of the PSOPE Committee as well as of other Committees, e.g., AMPS, to promote new solutions and technologies.",
+            "who-we-are": "",
+            "visible": true,
+            "size": 5,
+            "color": "#CEECD0"
+        },
+        {
+            "id": "NDMMO",
+            "name": "Natural Disaster Mitigation Methods and Operation Technology",
+            "type": "working group",
+            "url": "",
+            "chair": "Jay Liu;jay.liu@pjm.com",
+            "parent": "TI",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "BPS",
+            "name": "Best Practice Survey",
+            "type": "task force",
+            "url": "",
+            "chair": "none;none",
+            "parent": "NDMMO",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "ANDMM",
+            "name": "Advances in Natural Disaster Mitigation Methods",
+            "type": "task force",
+            "url": "",
+            "chair": "none;none",
+            "parent": "NDMMO",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "MLPS",
+            "name": "Machine Learning for Power Systems ",
+            "type": "working group",
+            "url": "https://cmte.ieee.org/pes-mlps/",
+            "chair": "Fran Li;fli6@utk.edu",
+            "parent": "TI",
+            "scope": "",
+            "who-we-are": "The Working Group (WG) on Machine Learning for Power Systems (MLPS) is the professional home for researchers and engineers involved in the application of the latest machine learning techniques for the operation and planning of power systems. It is a repository of technical and educational materials such as technical papers, presentations, tutorials and panel discussions. The WG is under the direction of the Technologies and Innovations (T&I) subcommittee of the IEEE PES Power Systems Operation, Planning and Economics (PSOPE) committee.",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "RLPSD",
+            "name": "Reinforcement Learning for Power System Dynamic Controls",
+            "type": "task force",
+            "url": "",
+            "chair": "Yichen Zhang;none",
+            "parent": "MLPS",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "MLPSS",
+            "name": "Machine-learning based Power System Synthetic Data Generation, Validation, and Sharing",
+            "type": "task force",
+            "url": "",
+            "chair": "Yiyan Li;none",
+            "parent": "MLPS",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "CGMDT-",
+            "name": "Cloud for Grid Modernization and Digital Transformation",
+            "type": "working group",
+            "url": "",
+            "chair": "Song Zhang;songaws@amazon.com",
+            "parent": "TI",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#93CAE6"
+        },
+        {
+            "id": "HI",
+            "name": "Hydrogen Integration",
+            "type": "task force",
+            "url": "https://site.ieee.org/pes-psope/subcommittees/technologies-and-innovation-subcommittee/task-force-on-hydrogen-integration/",
+            "chair": "Jianhui Wang;jianhui@smu.edu",
+            "parent": "TI",
+            "scope": "The goal of the task force is to investigate issues related to integration of hydrogen into power systems from the perspectives of operation, planning, and risk assessment.\u2013 Models and approaches cover different aspects of power systems and consider the entire hydrogen value chain (e.g., hydrogen production, storage, delivery, and consumption).\n\nTo achieve this goal, the task force will investigate the topics including the following:\n\nComprehensive literature review on hydrogen modeling\nElectrolyzer modeling, Fuel cell modeling\nHydrogen hub modeling and simulation\nHydrogen storage system modeling\nNew power system operation and planning models with hydrogen\nNew power system risk assessment models and approaches with hydrogen\nGrid forming-grid following fuel cell inverter operation, control and interoperability",
+            "who-we-are": "As a promising solution to addressing the issues raised by the high penetration of renewable energy (RE) (e.g., oversupply and curtailment), hydrogen and hydrogen interfacing assets has gained significant momentum recently.\n\nIn particular, green hydrogen is generated using RE with no pollution. Along with blue hydrogen from natural gas, green hydrogen can be used for a variety of applications in an environmentally friendly manner.\n\nConverting back to electricity (or long term storage for grid support)\nInjecting into natural gas systems\nSupplying hydrogen demand for transportation",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "EFPSO",
+            "name": "Empowering the Future of Power Systems Operation and Control with Quantum Computing",
+            "type": "task force",
+            "url": "",
+            "chair": "Yan Li;yql5925@psu.edu",
+            "parent": "TI",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "BVEPS",
+            "name": "Benchmarks for Validation of Emerging Power System Algorithms",
+            "type": "task force",
+            "url": "",
+            "chair": "Carleton Coffrin;carleton@coffrin.com",
+            "parent": "TI",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "ETDTR",
+            "name": "Enabling technologies for Dynamic Thermal Rating of Power Components",
+            "type": "task force",
+            "url": "",
+            "chair": "Alfredo Vaccaro;vaccaro@unisannio.it",
+            "parent": "TI",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "FRTC",
+            "name": "Faster Than Real-Time Computing",
+            "type": "task force",
+            "url": "",
+            "chair": "Guangyi Liu;liu.guangyi@envision-digital.com",
+            "parent": "TI",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "SLSOP",
+            "name": "Solving Large Scale Optimization Problem in Electricity Market and Power System Applications",
+            "type": "task force",
+            "url": "",
+            "chair": "Yonghong Chen;Yonghong.chen@nrel.gov",
+            "parent": "TI",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "IOTPS",
+            "name": "Internet of Things for Power Systems",
+            "type": "task force",
+            "url": "https://cmte.ieee.org/pes-iotps/",
+            "chair": "Di Shi;dshi@nmsu.edu",
+            "parent": "TI",
+            "scope": "",
+            "who-we-are": "",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        },
+        {
+            "id": "DTLSP",
+            "name": "Digital Twin of Large Scale Power Systems",
+            "type": "task force",
+            "url": "https://cmte.ieee.org/pes-dtlsps/",
+            "chair": "Hossein Hooshyar;hossein.hooshyar@nypa.gov",
+            "parent": "TI",
+            "scope": "Objectives\nCreate a community of researchers and practitioners from electric utilities, academia, industrial R&D, and software vendors to share activities on the concept of DT in the power system space.\nReview state-of-the-art and provide a generic and harmonized definition and use cases for DT in the power system space.\nInvestigate practical requirements, challenges, and solutions to implement DTs for large-scale power systems.\nPropose a generic, vendor-agnostic high-level architecture, interfaces, and technologies that support the implementation of DTs for large-scale power systems.\nCreate examples of DTs for large-scale power systems for demonstrating their capabilities.",
+            "who-we-are": "Technological innovations and regulatory and market changes are driving a paradigm shift in the energy industry which is anticipated to change electricity generation, delivery, and usage by customers, such as:\nRenewable energy resources such as wind and solar generators are increasingly integrated in the bulk power system, thus accelerating decarbonization of the electric grid and facilitating a future net zero carbon economy.\nRegulatory and market changes and new technologies are expected to increase customer choice and enable customer market participation, thus promoting competition in electric markets and increasing customer benefit.\nAdvanced monitoring and control technologies are expected to be increasingly deployed in the power system to manage the ensuing variability in demand and generation.\nThe desired end state of these changes is envisioned to be an integrated energy network, providing a more interconnected and integrated energy system, providing customers with increased choice and control, the reliability, safety, and affordability they expect, and offering the additional benefits of a cleaner, electrified environment.\nRealization of an integrated energy network requires a more integrated approach to providing energy services and managing natural resources \u2013 a fundamental shift from the planning, operation, and regulation of today\u2019s power system.\nAddressing the challenges associated with this paradigm shift and ensuring the optimal design and deployment of new required technologies necessitates advanced modeling and simulation capabilities, significantly beyond today\u2019s existing capabilities.\nTo address these modeling and simulation needs, the concept of Digital Twin (DT) has been envisioned a potential solution.",
+            "visible": false,
+            "size": 2,
+            "color": "#ECCFED"
+        }
+    ],
+    "links": [
+        {
+            "source": "PES",
+            "target": "AMPS"
+        },
+        {
+            "source": "AMPS",
+            "target": "BDA"
+        },
+        {
+            "source": "BDA",
+            "target": "DDMMC"
+        },
+        {
+            "source": "BDA",
+            "target": "BDWS"
+        },
+        {
+            "source": "BDA",
+            "target": "BDATS"
+        },
+        {
+            "source": "BDA",
+            "target": "CGMDT"
+        },
+        {
+            "source": "BDA",
+            "target": "DA"
+        },
+        {
+            "source": "BDA",
+            "target": "ECIGE"
+        },
+        {
+            "source": "BDA",
+            "target": "DGCPS"
+        },
+        {
+            "source": "BDA",
+            "target": "IDERE"
+        },
+        {
+            "source": "BDA",
+            "target": "DSES"
+        },
+        {
+            "source": "BDA",
+            "target": "DAES"
+        },
+        {
+            "source": "BDA",
+            "target": "BDASR"
+        },
+        {
+            "source": "BDA",
+            "target": "BDASW"
+        },
+        {
+            "source": "AMPS",
+            "target": "CAM"
+        },
+        {
+            "source": "CAM",
+            "target": "UPPRC"
+        },
+        {
+            "source": "CAM",
+            "target": "HPCGA"
+        },
+        {
+            "source": "CAM",
+            "target": "CSPS"
+        },
+        {
+            "source": "CAM",
+            "target": "PSMIC"
+        },
+        {
+            "source": "CAM",
+            "target": "CADOP"
+        },
+        {
+            "source": "CAM",
+            "target": "NTOFP"
+        },
+        {
+            "source": "CAM",
+            "target": "CCAPS"
+        },
+        {
+            "source": "CAM",
+            "target": "PSUQU"
+        },
+        {
+            "source": "CAM",
+            "target": "PSAGH"
+        },
+        {
+            "source": "CAM",
+            "target": "DIOA"
+        },
+        {
+            "source": "CAM",
+            "target": "FMSAC"
+        },
+        {
+            "source": "AMPS",
+            "target": "DSA"
+        },
+        {
+            "source": "DSA",
+            "target": "STDDS"
+        },
+        {
+            "source": "DSA",
+            "target": "DTF"
+        },
+        {
+            "source": "DSA",
+            "target": "DSEPC"
+        },
+        {
+            "source": "DSA",
+            "target": "DSSEP"
+        },
+        {
+            "source": "DSA",
+            "target": "P1729"
+        },
+        {
+            "source": "AMPS",
+            "target": "ISA"
+        },
+        {
+            "source": "ISA",
+            "target": "IDMA"
+        },
+        {
+            "source": "ISA",
+            "target": "ICS"
+        },
+        {
+            "source": "ISA",
+            "target": "MAS"
+        },
+        {
+            "source": "ISA",
+            "target": "MHO"
+        },
+        {
+            "source": "ISA",
+            "target": "ODS"
+        },
+        {
+            "source": "AMPS",
+            "target": "RRPA"
+        },
+        {
+            "source": "RRPA",
+            "target": "RA"
+        },
+        {
+            "source": "RRPA",
+            "target": "PACME"
+        },
+        {
+            "source": "RRPA",
+            "target": "762-2006"
+        },
+        {
+            "source": "RRPA",
+            "target": "RCECP"
+        },
+        {
+            "source": "RRPA",
+            "target": "PSRME"
+        },
+        {
+            "source": "RRPA",
+            "target": "CSR"
+        },
+        {
+            "source": "AMPS",
+            "target": "TAS"
+        },
+        {
+            "source": "TAS",
+            "target": "MASTD"
+        },
+        {
+            "source": "MASTD",
+            "target": "RTSPE"
+        },
+        {
+            "source": "MASTD",
+            "target": "ITSTS"
+        },
+        {
+            "source": "MASTD",
+            "target": "DAMT"
+        },
+        {
+            "source": "MASTD",
+            "target": "DPMT"
+        },
+        {
+            "source": "MASTD",
+            "target": "URCEM"
+        },
+        {
+            "source": "MASTD",
+            "target": "MESS"
+        },
+        {
+            "source": "MASTD",
+            "target": "IBRTF"
+        },
+        {
+            "source": "MASTD",
+            "target": "PEVG"
+        },
+        {
+            "source": "MASTD",
+            "target": "ESLPS"
+        },
+        {
+            "source": "TAS",
+            "target": "FERRO"
+        },
+        {
+            "source": "TAS",
+            "target": "GDGAI"
+        },
+        {
+            "source": "TAS",
+            "target": "FMOTA"
+        },
+        {
+            "source": "TAS",
+            "target": "DERID"
+        },
+        {
+            "source": "PES",
+            "target": "PSOPE"
+        },
+        {
+            "source": "PSOPE",
+            "target": "BPSO"
+        },
+        {
+            "source": "BPSO",
+            "target": "PSSDS"
+        },
+        {
+            "source": "PSSDS",
+            "target": "DPSE"
+        },
+        {
+            "source": "PSSDS",
+            "target": "STCPS"
+        },
+        {
+            "source": "PSSDS",
+            "target": "SECT"
+        },
+        {
+            "source": "BPSO",
+            "target": "PSR-"
+        },
+        {
+            "source": "PSR-",
+            "target": "OTER"
+        },
+        {
+            "source": "PSR-",
+            "target": "CPIPS"
+        },
+        {
+            "source": "PSR-",
+            "target": "AITRP"
+        },
+        {
+            "source": "BPSO",
+            "target": "SAPSO"
+        },
+        {
+            "source": "BPSO",
+            "target": "WPN"
+        },
+        {
+            "source": "BPSO",
+            "target": "RMBPS"
+        },
+        {
+            "source": "BPSO",
+            "target": "BPSOV"
+        },
+        {
+            "source": "BPSO",
+            "target": "RTCA"
+        },
+        {
+            "source": "BPSO",
+            "target": "NGEAF"
+        },
+        {
+            "source": "BPSO",
+            "target": "VCSG"
+        },
+        {
+            "source": "PSOPE",
+            "target": "BPSP"
+        },
+        {
+            "source": "BPSP",
+            "target": "IRP"
+        },
+        {
+            "source": "BPSP",
+            "target": "TSP"
+        },
+        {
+            "source": "BPSP",
+            "target": "APSF"
+        },
+        {
+            "source": "BPSP",
+            "target": "IESMN"
+        },
+        {
+            "source": "BPSP",
+            "target": "AMCIP"
+        },
+        {
+            "source": "BPSP",
+            "target": "DBCIB"
+        },
+        {
+            "source": "PSOPE",
+            "target": "DSOP"
+        },
+        {
+            "source": "DSOP",
+            "target": "MFDSP"
+        },
+        {
+            "source": "DSOP",
+            "target": "AM-"
+        },
+        {
+            "source": "DSOP",
+            "target": "DMS"
+        },
+        {
+            "source": "DSOP",
+            "target": "SESDC"
+        },
+        {
+            "source": "SESDC",
+            "target": "EUOGA"
+        },
+        {
+            "source": "SESDC",
+            "target": "ENAL"
+        },
+        {
+            "source": "SESDC",
+            "target": "MGPFT"
+        },
+        {
+            "source": "DSOP",
+            "target": "FTSOD"
+        },
+        {
+            "source": "PSOPE",
+            "target": "PSE"
+        },
+        {
+            "source": "PSE",
+            "target": "BMES"
+        },
+        {
+            "source": "PSE",
+            "target": "DR"
+        },
+        {
+            "source": "PSE",
+            "target": "TSEA"
+        },
+        {
+            "source": "PSE",
+            "target": "EFA"
+        },
+        {
+            "source": "PSOPE",
+            "target": "TI"
+        },
+        {
+            "source": "TI",
+            "target": "NDMMO"
+        },
+        {
+            "source": "NDMMO",
+            "target": "BPS"
+        },
+        {
+            "source": "NDMMO",
+            "target": "ANDMM"
+        },
+        {
+            "source": "TI",
+            "target": "MLPS"
+        },
+        {
+            "source": "MLPS",
+            "target": "RLPSD"
+        },
+        {
+            "source": "MLPS",
+            "target": "MLPSS"
+        },
+        {
+            "source": "TI",
+            "target": "CGMDT-"
+        },
+        {
+            "source": "TI",
+            "target": "HI"
+        },
+        {
+            "source": "TI",
+            "target": "EFPSO"
+        },
+        {
+            "source": "TI",
+            "target": "BVEPS"
+        },
+        {
+            "source": "TI",
+            "target": "ETDTR"
+        },
+        {
+            "source": "TI",
+            "target": "FRTC"
+        },
+        {
+            "source": "TI",
+            "target": "SLSOP"
+        },
+        {
+            "source": "TI",
+            "target": "IOTPS"
+        },
+        {
+            "source": "TI",
+            "target": "DTLSP"
+        }
+    ]
+}

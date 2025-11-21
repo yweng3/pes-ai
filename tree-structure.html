@@ -1,0 +1,237 @@
+<head>
+	<style> 
+		body { margin: 0; } 
+
+        .info-label {
+			display: inline-block;
+            position: relative;
+			top: 10px; /* Base starting point */
+			left: 10px; 
+			
+			padding: 5px 8px;
+			font-family: sans-serif;
+			font-weight: bold;
+			font-size: 14px;
+			color: var(--label-text-color, black); 
+			border-radius: 4px;
+			z-index: 10;
+			cursor: default; 
+			background-color: var(--label-fill-color); 
+			border: 1px solid #ccc;
+        }
+	</style>
+	<script src="//cdn.jsdelivr.net/npm/force-graph"></script>
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+	<style>
+		.clickable { cursor: unset !important }
+	</style>
+</head>
+
+<body>
+<div class="info-label" style="--label-fill-color: white;">
+	Left-Click: Expand/Collapse Structure
+	<br>
+	Right-Click: Open URL
+</div>
+<div class="info-label" style="--label-text-color:white; --label-fill-color: #B02318;">
+	PES Technical Committees
+</div>
+<div class="info-label" style="--label-fill-color: #FBECA6;">
+	Committee
+</div>
+<div class="info-label" style="--label-fill-color: #CEECD0;">
+	Subcommittee
+</div>
+<div class="info-label" style="--label-fill-color: #93CAE6;">
+	Working Group
+</div>
+<div class="info-label" style="--label-fill-color: #ECCFED;">
+	Task Force
+</div>
+
+
+<div id="graph"></div>
+
+<script type="module">
+	import { forceCollide } from 'https://esm.sh/d3-force';
+	const ROOT_ID = 'PES';
+	const elem = document.getElementById('graph');
+	const NODE_SPACING_BUFFER = 15;
+
+	function wrapText(ctx, text, maxWidth) {
+		const words = text.split(' ');
+		let lines = [];
+		let currentLine = words[0] || '';
+
+		for (let i = 1; i < words.length; i++) {
+			const word = words[i];
+			const prospectiveLine = currentLine + ' ' + word;
+			
+			// If the new line width exceeds maxWidth, push the current line and start a new one
+			if (ctx.measureText(prospectiveLine).width > maxWidth) {
+				lines.push(currentLine);
+				currentLine = word;
+			} else {
+				currentLine = prospectiveLine;
+			}
+		}
+		lines.push(currentLine); // Push the last line
+		return lines;
+	}
+
+	function roundRect(ctx, x, y, w, h, r) {
+		if (w < 2 * r) r = w / 2;
+		if (h < 2 * r) r = h / 2;
+		ctx.beginPath();
+		ctx.moveTo(x + r, y);
+		ctx.arcTo(x + w, y, x + w, y + h, r);
+		ctx.arcTo(x + w, y + h, x, y + h, r);
+		ctx.arcTo(x, y + h, x, y, r);
+		ctx.arcTo(x, y, x + w, y, r);
+		ctx.closePath();
+	}
+
+	fetch('/gData.json').then(res => res.json()).then(data => {
+		const nodes = data.nodes;
+		const flatLinks = data.links;
+
+		const nodesById = Object.fromEntries(nodes.map(node => {
+			node.childLinks = [];
+			node.collapsed = node.id !== ROOT_ID; // root node 
+			return [node.id, node];
+		}));
+
+		flatLinks.forEach(link => {
+            if (nodesById[link.source] && nodesById[link.target]) {
+                 nodesById[link.source].childLinks.push(link);
+            }
+        });
+
+		const getPrunedTree = () => {
+			const visibleNodes = [];
+			const visibleLinks = [];
+
+			(function traverseTree(node = nodesById[ROOT_ID]) {
+				if (!node) return;
+				if (node.filtered) return;
+
+				visibleNodes.push(node);
+				if (node.collapsed) return; 
+
+				visibleLinks.push(...node.childLinks);
+				
+				node.childLinks
+					.map(link => ((typeof link.target) === 'object') ? link.target : nodesById[link.target]) 
+					.forEach(traverseTree);
+			})();
+			return { nodes: visibleNodes, links: visibleLinks };
+		};
+
+		const Graph = new ForceGraph(elem)
+            .graphData(getPrunedTree())
+			.nodeRelSize(50)
+            .nodeLabel(node => "Chair:" + node.chair + "<br/><br/>" + "Scope:" + node.scope)
+            .nodeColor(node => node.color)
+            
+            .nodeCanvasObject((node, ctx, scale) => {
+                const label = node.name;
+                const fontSize = 12/scale;
+                ctx.font = `${fontSize}px Sans-Serif`;
+                
+                // 💡 Step 1: Define maximum line width and wrap the text
+                const MAX_TEXT_LINE_WIDTH = 120; // Max width in pixels at base scale
+                const maxWidth = MAX_TEXT_LINE_WIDTH / scale;
+                const lines = wrapText(ctx, label, maxWidth);
+                
+                const lineHeight = fontSize * 1.2; // Space between lines
+                const totalHeight = lines.length * lineHeight * 1.1;
+                
+                // Find the widest line to determine the background width
+                let maxLineWidth = 0;
+                lines.forEach(line => {
+                    const width = ctx.measureText(line).width;
+                    if (width > maxLineWidth) maxLineWidth = width;
+                });
+
+                // Calculate bounding box dimensions with padding
+                const bckgWidth = maxLineWidth + fontSize * 0.4;
+                const bckgHeight = totalHeight + fontSize * 0.2;
+                const bckgDimensions = [bckgWidth, bckgHeight]; 
+                
+                const cornerRadius = 4 / scale;
+				const rectX = node.x - bckgWidth / 2;
+                const rectY = node.y - bckgHeight / 2;
+
+                roundRect(ctx, rectX, rectY, bckgWidth, bckgHeight, cornerRadius);
+                ctx.fillStyle = node.color;
+                ctx.fill(); // Fill the rounded path
+                // 💡 Step 3: Draw the wrapped text lines
+                ctx.textAlign = 'center';
+                ctx.fillStyle = 'black';
+                
+                // Calculate the starting Y position for the first line
+                let currentY = node.y - totalHeight / 2 + lineHeight * 0.9; 
+
+                lines.forEach(line => {
+                    ctx.fillText(line, node.x, currentY);
+                    currentY += lineHeight;
+                });
+                
+                node.__bckgDimensions = bckgDimensions; // Save the new, multi-line dimensions
+            })
+
+			.nodePointerAreaPaint((node, color, ctx, scale) => {
+                const [bckgWidth, bckgHeight] = node.__bckgDimensions; // Use saved dimensions
+                const cornerRadius = 4 / scale;
+                
+                // 1. Calculate the top-left (x, y) coordinates
+                const rectX = node.x - bckgWidth / 2;
+                const rectY = node.y - bckgHeight / 2;
+                
+                // 2. Define the path (using your existing helper)
+                roundRect(ctx, rectX, rectY, bckgWidth, bckgHeight, cornerRadius);
+
+                // 3. Set the fill style to the unique color provided by the library
+                ctx.fillStyle = color;
+                
+                // 4. Fill the path—this hidden, colored shape defines the clickable area
+                ctx.fill();
+            })
+
+			.onNodeHover(node => {
+                const isClickable = node && node.childLinks.length;
+                // 'pointer' is the hand icon, 'default' is the standard arrow.
+                elem.style.cursor = isClickable ? 'pointer' : 'default';
+            })
+
+            .onNodeClick(node => {
+                if (node.childLinks.length) {
+                    // Toggle the collapse state
+                    node.collapsed = !node.collapsed; 
+                    
+                    // Rerender the graph with the new collapse state
+                    Graph.graphData(getPrunedTree());
+                }
+            })
+
+
+			.onNodeRightClick(node => {
+                // 1. Check if the node has a URL defined
+                if (node.url) {
+                    // 2. Open the URL in a new browser tab/window
+                    window.open(node.url, '_blank');
+                }
+            })
+            
+            // Force DAG/Tree structure layout
+            .dagMode('td') // Top-Down layout
+            .dagLevelDistance(60) // Spacing between tree levels
+            
+            // Custom forces for better physics
+            .d3Force('collision', forceCollide(node => Graph.nodeRelSize()))
+			.d3Force('x', d3.forceX().strength(0.1))
+            .warmupTicks(250); // Run simulation briefly to stabilize before rendering
+    	});
+
+</script>
+</body>

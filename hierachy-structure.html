@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Hierarchy Tree</title>
+    <style>
+        /* Basic styling for better visualization */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .website-tree {
+        /* REMOVE or COMMENT OUT this line: list-style: none; */ 
+            padding-left: 0; /* Keep the padding for overall alignment */
+        }
+        .website-tree ul {
+            /* Change this from 'none' to 'disc' or another type */
+            list-style: disc; /* This explicitly adds the standard bullet */
+            padding-left: 40px; /* Increase padding to make room for the bullet */
+            margin-top: 5px;
+        }
+        .website-item {
+            padding: 5px 0;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        /* .website-item:hover {
+            background-color: #f0f0f0;
+        } */
+        .site-name {
+            font-weight: bold;
+            color: #333;
+        }
+        .site-url {
+            color: #007bff;
+            text-decoration: none;
+            margin-left: 10px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>PES Technical Committees Hierarchy</h1>
+
+    <div id="website-container"></div>
+
+    <script>
+        function buildTree(items) {
+            const tree = [];
+            const map = {};
+
+            // Initialize map with all items and set an empty 'children' array
+            items.forEach(item => {
+                map[item.id] = { ...item, children: [] };
+            });
+
+            // Iterate again to build the hierarchy
+            items.forEach(item => {
+                const node = map[item.id];
+                
+                // If it has a parent AND the parent exists in the map
+                if (item.parent && map[item.parent]) {
+                    map[item.parent].children.push(node);
+                } else {
+                    // This is a root node (no parent or parent not found)
+                    tree.push(node);
+                }
+            });
+
+            return tree;
+        }
+
+        /**
+         * 3. Function to recursively render the tree structure as an HTML <ul>.
+         */
+        function renderTree(nodes) {
+            if (nodes.length === 0) return '';
+
+            // Start an unordered list for this level
+            let html = '<ul class="website-tree">';
+
+            nodes.forEach(node => {
+                html += `<li class="website-item" data-id="${node.id}">`;
+                
+                // Add the site name and a clickable URL
+                const typeColor = getColorForType(node.type);
+                html += `<span style="color: ${typeColor}; font-weight: bold;">[${node.type}] </span>`;
+                html += `<span class="site-name">${node.name}</span>`;
+                if(node.url)
+                    html += `<a href="${node.url}" target="_blank" class="site-url" title="Go to ${node.url}">[Visit]</a>`;
+
+                // Recursively call renderTree for the children, 
+                // which will create the nested <ul>
+                if (node.children.length > 0) {
+                    html += renderTree(node.children);
+                }
+
+                html += '</li>';
+            });
+
+            html += '</ul>';
+            return html;
+        }
+
+        function getColorForType(type) {
+            switch (type.toUpperCase()) {
+                case 'ROOT':
+                    return '#B02318';
+                case 'COMMITTEE':
+                    return '#FBECA6';
+                case 'SUBCOMMITTEE':
+                    return '#CEECD0';
+                case 'WORKING GROUP':
+                    return '#93CAE6';
+                default:
+                    return '#ECCFED';
+            }
+        }
+
+        // 4. Main execution
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('/gData.json').then(res => res.json()).then(data => {
+                const treeData = buildTree(data.nodes);
+                const container = document.getElementById('website-container');
+                
+                // Assuming there's only one root (or you want to display all roots)
+                container.innerHTML = renderTree(treeData);
+            });
+        });
+
+    </script>
+
+</body>
+</html>
