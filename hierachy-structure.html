@@ -124,7 +124,7 @@
 
         // 4. Main execution
         document.addEventListener('DOMContentLoaded', () => {
-            fetch('/gData.json').then(res => res.json()).then(data => {
+            fetch('gData.json').then(res => res.json()).then(data => {
                 const treeData = buildTree(data.nodes);
                 const container = document.getElementById('website-container');
                 
