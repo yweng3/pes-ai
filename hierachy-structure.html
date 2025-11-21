@@ -90,6 +90,9 @@
                 html += `<span class="site-name">${node.name}</span>`;
                 if(node.url)
                     html += `<a href="${node.url}" target="_blank" class="site-url" title="Go to ${node.url}">[Visit]</a>`;
+                console.log(node.AI_Related)
+                if(node.AI_Related)
+                    html += `<span class="site-name"> [AI-related]</span>`;
 
                 // Recursively call renderTree for the children, 
                 // which will create the nested <ul>
@@ -121,7 +124,7 @@
 
         // 4. Main execution
         document.addEventListener('DOMContentLoaded', () => {
-            fetch('gData.json').then(res => res.json()).then(data => {
+            fetch('/gData.json').then(res => res.json()).then(data => {
                 const treeData = buildTree(data.nodes);
                 const container = document.getElementById('website-container');
                 
